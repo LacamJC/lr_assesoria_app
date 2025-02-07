@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.titulo {
+  font-family: "Instrument Serif", cursive;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 3rem;
+  letter-spacing: 2.5px;
+}
+
+.button_bege {
+  background-color: #FCCEB4;
+  color: #59372F;
+  border: none;
+  min-height: 50px;
+  min-width: 200px;
+  padding: 5px 20px;
+  font-family: "Inter", cursive;
+  border-radius: 5px;
+}
+
+.subtitulo {
+  font-family: "Instrument Serif", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  background-color: #59372F;
+  padding: 0px 150px;
+}
+.cabecalho .logo_container {
+  height: 100%;
+}
+.cabecalho .large_nav {
+  width: 100%;
+}
+.cabecalho .large_nav .menu_list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.cabecalho .large_nav .menu_list .menu_list__link {
+  text-decoration: none;
+}
+.cabecalho .large_nav .menu_list .menu_list__link:hover {
+  text-decoration: underline;
+  text-decoration-color: #FCCEB4;
+}
+.cabecalho .large_nav .menu_list .menu_list__link .menu_list__item {
+  color: #FCCEB4;
+  padding: 5px 10px;
+  font-family: "Instrument Serif", cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=Header.module.css.map */

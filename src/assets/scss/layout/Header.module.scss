@@ -1,0 +1,57 @@
+@import '../variables';
+
+.cabecalho
+{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    background-color: $cor1;
+    // background-color: rgba(0, 255, 221, 0.329);
+    padding: 0px 150px;
+    .logo_container{
+        height: 100%;
+        // width: 20%;
+    }
+
+    .large_nav
+    {
+        // background-color: blue;
+        width: 100%;
+        .menu_list
+        {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            
+            // background-color: yellow;
+
+            width: 100%;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+
+
+            .menu_list__link{
+                text-decoration: none;
+                // color: black;
+
+                &:hover{
+                    text-decoration: underline;
+                    text-decoration-color: $cor2;
+                }
+
+                .menu_list__item
+                {
+                    color: $cor2;
+                    // background-color: pink;
+
+                    padding: 5px 10px;
+                    font-family: $fonte1;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}

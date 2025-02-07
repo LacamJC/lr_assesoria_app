@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+$cor1 : #59372F;
+$cor2 : #FCCEB4;
+$cor3 : #FFF8F0;
+
+$fonte1 : "Instrument Serif", cursive;
+$fonte2 : "Inter", cursive;
+
+.titulo {
+    font-family: "Instrument Serif", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
+    letter-spacing: 2.5px;
+}
+
+@mixin box-shadow{
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
+}
+
+
+.button_bege{
+    background-color: $cor2;
+    color: $cor1;
+    border: none;
+    min-height: 50px;
+    min-width: 200px;
+    padding: 5px 20px ;
+    font-family: $fonte2;
+    border-radius: 5px;
+}
+
+.subtitulo {
+    font-family: "Instrument Serif", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
