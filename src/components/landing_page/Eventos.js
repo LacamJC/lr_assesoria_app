@@ -68,13 +68,14 @@ const Eventos = () =>{
                 ))} */}
 
                 <Carousel
-                     swipeable={false}
+                     swipeable={true}
                      draggable={true}
                      showDots={false}
                      responsive={responsive}
                      ssr={true} // means to render carousel on server-side.
                      infinite={true}
-                     autoPlaySpeed={1000}
+                     autoPlay={true}
+                     autoPlaySpeed={3000}
                      // keyBoardControl={true}
                      // customTransition="all .5"
                      // transitionDuration={500}

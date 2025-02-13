@@ -95,6 +95,7 @@
                     top: 0;
                     left: 0;
                     right: 0;
+                    display: block;
                     bottom: 0;
                     background-color: #0000009d;
                     opacity: 1;
@@ -120,6 +121,7 @@
                 &:before{
                     content: "";
                     transition: .2s ease all;
+                    display: none;
                     top: 0;
                     left: 0;
                     right: 0;
