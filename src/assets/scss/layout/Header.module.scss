@@ -16,6 +16,9 @@
     .large_nav
     {
         // background-color: blue;
+        @media screen and (max-width: 768px){
+            display: none;
+        }
         width: 100%;
         .menu_list
         {

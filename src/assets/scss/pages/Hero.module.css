@@ -7,6 +7,12 @@
   letter-spacing: 2.5px;
 }
 
+.paragrafo {
+  font-size: 1.1rem;
+  font-family: "Inter", cursive;
+  color: #292929;
+}
+
 .button_bege {
   background-color: #FCCEB4;
   color: #59372F;
@@ -43,8 +49,20 @@
   font-weight: normal;
   letter-spacing: 4px;
 }
+.hero h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+@media screen and (min-width: 600px) {
+  .hero h1 {
+    width: 51%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
 .hero h2 {
   text-align: center;
+  font-size: 1.7rem;
 }
 .hero button {
   width: 80%;

@@ -1,0 +1,33 @@
+@import '../variables';
+
+.content
+{
+    background-color:  $cor2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .subtitulo{
+        font-size: 3rem;
+        text-align: center;
+        font-family: $fonte1;
+    }
+
+    .paragrafo
+    {
+        text-align: center;
+        font-size: 1.5rem;
+        width: 50%;
+
+        @media screen and (max-width: 769px){
+            width: 80%;
+        }
+
+        @media screen and (max-width: 600px)
+        {
+            width: 100%;
+            padding: 0px 10px;
+        }
+        font-family: $fonte2;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+}

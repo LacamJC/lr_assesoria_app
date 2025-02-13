@@ -7,6 +7,12 @@
   letter-spacing: 2.5px;
 }
 
+.paragrafo {
+  font-size: 1.1rem;
+  font-family: "Inter", cursive;
+  color: #292929;
+}
+
 .button_bege {
   background-color: #FCCEB4;
   color: #59372F;
@@ -38,6 +44,11 @@
 }
 .cabecalho .large_nav {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .cabecalho .large_nav {
+    display: none;
+  }
 }
 .cabecalho .large_nav .menu_list {
   list-style: none;

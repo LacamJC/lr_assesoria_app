@@ -4,6 +4,7 @@
 $cor1 : #59372F;
 $cor2 : #FCCEB4;
 $cor3 : #FFF8F0;
+$cor4 : #292929;
 
 $fonte1 : "Instrument Serif", cursive;
 $fonte2 : "Inter", cursive;
@@ -18,6 +19,12 @@ $fonte2 : "Inter", cursive;
 
 @mixin box-shadow{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
+}
+
+.paragrafo {
+    font-size: 1.1rem;
+    font-family: $fonte2;
+    color: $cor4;
 }
 
 

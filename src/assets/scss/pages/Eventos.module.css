@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.titulo {
+  font-family: "Instrument Serif", cursive;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 3rem;
+  letter-spacing: 2.5px;
+}
+
+.paragrafo {
+  font-size: 1.1rem;
+  font-family: "Inter", cursive;
+  color: #292929;
+}
+
+.button_bege {
+  background-color: #FCCEB4;
+  color: #59372F;
+  border: none;
+  min-height: 50px;
+  min-width: 200px;
+  padding: 5px 20px;
+  font-family: "Inter", cursive;
+  border-radius: 5px;
+}
+
+.subtitulo {
+  font-family: "Instrument Serif", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.content {
+  background-color: #FCCEB4;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.content .subtitulo {
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Instrument Serif", cursive;
+}
+.content .paragrafo {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50%;
+  font-family: "Inter", cursive;
+  margin: auto;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 769px) {
+  .content .paragrafo {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content .paragrafo {
+    width: 100%;
+    padding: 0px 10px;
+  }
+}/*# sourceMappingURL=Eventos.module.css.map */
