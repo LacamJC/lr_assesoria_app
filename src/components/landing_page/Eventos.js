@@ -1,6 +1,7 @@
 import styles from '../../assets/scss/pages/Eventos.module.css'
 import Card from '../objects/Card';
 import icone_casamento from '../../assets/img/icones/casamento_black.png'
+import icone_panela from '../../assets/img/icones/panela_black.png'
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel"
 const Eventos = () =>{
@@ -18,7 +19,7 @@ const Eventos = () =>{
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 1,
+          items: 2,
           partialVisibilityGutter: 30
         },
         mobile: {
@@ -34,26 +35,28 @@ const Eventos = () =>{
             title : "Casamento",
         },
         {
+            img : icone_panela,
+            title : "Chá de Panela",
+        }, {
             img : icone_casamento,
             title : "Casamento",
         },
         {
+            img : icone_panela,
+            title : "Chá de Panela",
+        }, {
             img : icone_casamento,
             title : "Casamento",
         },
         {
-            img : icone_casamento,
-            title : "Casamento",
-        },
-        {
-            img : icone_casamento,
-            title : "Casamento",
-        },
+            img : icone_panela,
+            title : "Chá de Panela",
+        }
     ]
 
     return(
         <>
-            <article className={`${styles.content}`}>
+            <article className={`${styles.content}`} id='eventos'>
                 <h2 className={`${styles.subtitulo}`}>Eventos</h2>
                 <p className={`${styles.paragrafo}`}>Vamos além de um simples serviço de assesoria, cuidados de tudo que você precisa para ter o evento dos seus sonhos</p>
 

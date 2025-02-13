@@ -39,6 +39,12 @@
   background-color: #59372F;
   padding: 0px 150px;
 }
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    padding: 0px 50px;
+    justify-content: space-between;
+  }
+}
 .cabecalho .logo_container {
   height: 100%;
 }
@@ -73,4 +79,85 @@
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 1px;
+}
+.cabecalho .hiddenNav {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+  }
+  .cabecalho .hiddenNav {
+    display: block;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cabecalho .hiddenNav .checkbox {
+    width: 50px;
+    position: relative;
+    height: 50px;
+    z-index: 1000;
+  }
+  .cabecalho .hiddenNav .checkbox:checked ~ .menu_list {
+    transform: translateX(0%);
+  }
+  .cabecalho .hiddenNav .checkbox:checked ~ .menu_list:before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6156862745);
+    opacity: 1;
+    position: absolute;
+    transform: translateX(-375px);
+  }
+  .cabecalho .hiddenNav .menu_list {
+    background-color: #59372F;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0px;
+    z-index: 500;
+    padding-top: 75px;
+    transition: 0.5s ease all;
+    transform: translateX(100%);
+    list-style: none;
+  }
+  .cabecalho .hiddenNav .menu_list:before {
+    content: "";
+    transition: 0.2s ease all;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-374px);
+  }
+  .cabecalho .hiddenNav .menu_list .menu_list__link {
+    text-decoration: none;
+  }
+  .cabecalho .hiddenNav .menu_list .menu_list__link .menu_list__item {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: "Instrument Serif", cursive;
+    color: #FCCEB4;
+    transition: 0.5s ease all;
+  }
+  .cabecalho .hiddenNav .menu_list .menu_list__link .menu_list__item:hover {
+    background-color: #FCCEB4;
+    color: #59372F;
+  }
 }/*# sourceMappingURL=Header.module.css.map */

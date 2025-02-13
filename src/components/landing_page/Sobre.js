@@ -4,7 +4,7 @@ import styles from '../../assets/scss/pages/Sobre.module.css'
 const Sobre = () =>{
     return(
         <>
-            <article className={`${styles.background} row w-100 mx-auto`}>
+            <article className={`${styles.background} row w-100 mx-auto`} id='sobre'>
                 <div className={`${styles.content} col-10 `}>
                     <div className="row w-100" >
                         <div className={`col col-md-6 col-12 ${styles.article}`}>

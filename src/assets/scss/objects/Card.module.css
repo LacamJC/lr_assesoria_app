@@ -41,6 +41,7 @@
   width: 220px;
   height: 310px;
   margin: auto;
+  transform: scale(0.8);
 }
 .card .card__body {
   margin-top: 20px;
