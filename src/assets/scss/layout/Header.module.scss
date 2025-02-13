@@ -73,6 +73,18 @@
         top: 0;
         width: 100%;
         z-index: 300;
+        height: 100px;
+
+        .logo_container{
+            height: 100%;
+            // width: 20%;
+
+            .logo_imagem
+            {
+                height: 100%;
+            }
+        }
+    
 
         .hiddenNav{
             display: block;
@@ -82,9 +94,10 @@
             align-items: center;
             // background-color: red;
             .checkbox{
-                width: 50px;
+                width: 30px;
+                height: 30px;
+                
                 position: relative;
-                height: 50px;
                 z-index: 1000;
             }
 
@@ -100,7 +113,7 @@
                     background-color: #0000009d;
                     opacity: 1;
                     position: absolute;
-                    transform: translateX(-375px);
+                    transform: translateX(-100%);
                 }
             }
             .menu_list{
@@ -120,15 +133,15 @@
 
                 &:before{
                     content: "";
-                    transition: .2s ease all;
-                    display: none;
+                    transition: .5s ease all;
+                    display: block;
                     top: 0;
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    opacity: 0;
+                    opacity: 1;
                     position: absolute;
-                    transform: translateX(-374px);
+                    // transform: translateX(-374px);
                 }
 
                 
@@ -147,12 +160,15 @@
                         letter-spacing: 2px;
                         font-family: $fonte1;
                         color: $cor2;
+                        // border-radius: 5px;
 
                         transition: .5s ease all;
 
                         &:hover{
-                            background-color: $cor2;
-                            color: $cor1;
+                            // background-color: $cor2;
+                            // color: $cor1;
+                            text-decoration: underline;
+                            text-decoration-color: $cor2;
                         }
                     }
                 }

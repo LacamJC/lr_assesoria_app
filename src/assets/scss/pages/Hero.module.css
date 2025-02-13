@@ -22,13 +22,19 @@
   padding: 5px 20px;
   font-family: "Inter", cursive;
   border-radius: 5px;
+  transition: 0.5s ease all;
+}
+.button_bege:hover {
+  cursor: pointer;
+  background-color: #59372F;
+  color: #FFF8F0;
 }
 
 .subtitulo {
   font-family: "Instrument Serif", cursive;
   font-weight: 600;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 2px;
 }
 
@@ -63,6 +69,15 @@
 .hero h2 {
   text-align: center;
   font-size: 1.7rem;
+}
+@media screen and (max-width: 657px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
 }
 .hero button {
   max-width: 500px;

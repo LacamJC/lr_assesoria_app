@@ -22,13 +22,19 @@
   padding: 5px 20px;
   font-family: "Inter", cursive;
   border-radius: 5px;
+  transition: 0.5s ease all;
+}
+.button_bege:hover {
+  cursor: pointer;
+  background-color: #59372F;
+  color: #FFF8F0;
 }
 
 .subtitulo {
   font-family: "Instrument Serif", cursive;
   font-weight: 600;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 2px;
 }
 
@@ -89,6 +95,13 @@
     top: 0;
     width: 100%;
     z-index: 300;
+    height: 100px;
+  }
+  .cabecalho .logo_container {
+    height: 100%;
+  }
+  .cabecalho .logo_container .logo_imagem {
+    height: 100%;
   }
   .cabecalho .hiddenNav {
     display: block;
@@ -98,9 +111,9 @@
     align-items: center;
   }
   .cabecalho .hiddenNav .checkbox {
-    width: 50px;
+    width: 30px;
+    height: 30px;
     position: relative;
-    height: 50px;
     z-index: 1000;
   }
   .cabecalho .hiddenNav .checkbox:checked ~ .menu_list {
@@ -116,7 +129,7 @@
     background-color: rgba(0, 0, 0, 0.6156862745);
     opacity: 1;
     position: absolute;
-    transform: translateX(-375px);
+    transform: translateX(-100%);
   }
   .cabecalho .hiddenNav .menu_list {
     background-color: #59372F;
@@ -134,15 +147,14 @@
   }
   .cabecalho .hiddenNav .menu_list:before {
     content: "";
-    transition: 0.2s ease all;
-    display: none;
+    transition: 0.5s ease all;
+    display: block;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
-    transform: translateX(-374px);
   }
   .cabecalho .hiddenNav .menu_list .menu_list__link {
     text-decoration: none;
@@ -159,7 +171,7 @@
     transition: 0.5s ease all;
   }
   .cabecalho .hiddenNav .menu_list .menu_list__link .menu_list__item:hover {
-    background-color: #FCCEB4;
-    color: #59372F;
+    text-decoration: underline;
+    text-decoration-color: #FCCEB4;
   }
 }/*# sourceMappingURL=Header.module.css.map */

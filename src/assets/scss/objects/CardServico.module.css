@@ -39,22 +39,36 @@
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .card {
-  width: 220px;
-  height: 310px;
-  margin: auto;
-  transform: scale(0.8);
+  width: 450px;
+  height: 600px;
+  border-radius: 15px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 50px;
+  background-color: #59372F;
+  color: #FCCEB4;
+  align-items: center;
 }
-.card .card__body {
-  margin-top: 20px;
+.card h3 {
   text-align: center;
-}
-.card .card__body h3 {
-  font-size: 2rem;
+  color: #FFF8F0;
   font-family: "Instrument Serif", cursive;
   letter-spacing: 3px;
-}/*# sourceMappingURL=Card.module.css.map */
+}
+.card ul {
+  height: 400px;
+  width: 80%;
+}
+.card ul li {
+  font-size: 1.5rem;
+  font-family: "Instrument Serif", cursive;
+  color: #FFF8F0;
+  letter-spacing: 3px;
+}/*# sourceMappingURL=CardServico.module.css.map */

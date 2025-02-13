@@ -36,6 +36,17 @@
         font-size: 1.7rem;
     }
 
+    @media screen and (max-width: 657px) {
+        h1{
+            font-size: 1.8rem;
+        }
+
+        h2{
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+    }
+
     button{
         max-width: 500px;
         margin: auto;
