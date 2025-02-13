@@ -1,5 +1,6 @@
 import styles from '../../assets/scss/layout/Header.module.css'
 import { Link } from 'react-router-dom'
+import logo from '../../assets/img/logos_logo_border_white.png'
 const Header = () =>{
     const handleClick = () =>{
         document.getElementById('checkbox').checked = false;
@@ -9,8 +10,9 @@ const Header = () =>{
             <header className={`${styles.cabecalho}`}>
                 <div className={`${styles.logo_container}`}>
                     <img 
-                        src={"https://placehold.co/150x150"}
+                        src={logo}
                         alt="Logo da LR Assesoria"
+                        
                         className={`${styles.logo_imagem}`}
                     />
                 </div>

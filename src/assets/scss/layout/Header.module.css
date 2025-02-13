@@ -53,6 +53,12 @@
 }
 .cabecalho .logo_container {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cabecalho .logo_container .logo_imagem {
+  height: 90%;
 }
 .cabecalho .large_nav {
   width: 100%;
@@ -96,12 +102,6 @@
     width: 100%;
     z-index: 300;
     height: 100px;
-  }
-  .cabecalho .logo_container {
-    height: 100%;
-  }
-  .cabecalho .logo_container .logo_imagem {
-    height: 100%;
   }
   .cabecalho .hiddenNav {
     display: block;

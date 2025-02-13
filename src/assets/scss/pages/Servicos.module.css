@@ -71,7 +71,7 @@
   }
 }
 .background .carousel_item {
-  height: 500px;
+  min-height: 500px;
 }
 .background .carousel_item .carousel_content {
   padding: 50px 60px;

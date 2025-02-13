@@ -17,6 +17,16 @@
     .logo_container{
         height: 100%;
         // width: 20%;
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo_imagem{
+            height: 90%;
+        }
+
+        
     }
 
     .large_nav
@@ -75,15 +85,7 @@
         z-index: 300;
         height: 100px;
 
-        .logo_container{
-            height: 100%;
-            // width: 20%;
-
-            .logo_imagem
-            {
-                height: 100%;
-            }
-        }
+      
     
 
         .hiddenNav{
