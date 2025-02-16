@@ -3,13 +3,14 @@
 .hero
 {
     width: 100%;
-    height: 700px;
+    min-height: 100vh;
     // background-color: rgba(255, 0, 0, 0.301);
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 300px;
 
     h1,h2{
         color: $cor3;
@@ -19,47 +20,133 @@
         font-weight: normal;
         letter-spacing: 4px;
     }
+  
+    .t_1, .t_2, .t_3, .t_4{
+        font-size: 5rem;
+        font-family: $fonte1;
 
-    h1{
-        text-align: center;
-        font-size: 2rem;
-
-        @media screen and (min-width: 600px){
-            width: 51%;
-            margin: auto;
-            margin-bottom: 20px;
-        }
+        animation: show_ease $time_animation ease;
     }
 
-    h2{
-        text-align: center;
-        font-size: 1.7rem;
+    .t_2{
+        display: block;
+        font-size: 6rem;
     }
 
-    @media screen and (max-width: 657px) {
-        h1{
-            font-size: 1.8rem;
-        }
-
-        h2{
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
+    .t_3{
+        display: block;
+        font-size: 4.7rem;
     }
 
-    button{
-        max-width: 500px;
+    .t_4{
+        font-size: 6rem;
+    }
+    .button{
+        background-color: $cor1;
+        width: 500px;
+        height: 75px;
         margin: auto;
-        font-size: 1.3rem;
-        margin-top: 20px;
-        transition: .5s ease all;
+        margin-top: 40px;
+        position: relative;
+        border-radius: 5px;
         @include box-shadow;
+
+        animation: show_ease $time_animation ease;
+        &::before{
+            content: "Realize seu sonho";
+            border-radius: 5px;
+            font-family: $fonte2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $cor2;
+            color: $cor1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 75px;
+
+            font-size: 2rem;
+            transform: translate(10px, -10px);
+            transition: .5s ease all;
+        }
+
         &:hover{
-            cursor: pointer;
-            background-color: $cor1;
-            color: $cor3;
+            &::before{
+                transform: translate(0px, 0px);
+                background-color: $cor1;
+                color: $cor2;
+            }
         }
     }
+
+
+
+    @media screen and (max-width: 1200px)
+    {
+        .t_2{
+            display: block;
+            font-size: 4rem;
+        }
+    
+        .t_3{
+            display: block;
+            font-size: 2.7rem;
+        }
+    
+        .t_4{
+            font-size: 3rem;
+        }
+
+        .button{
+            width: 400px;
+            height: 50px;
+
+            &::before{
+                width: 400px;
+                font-size: 1.5rem;
+                height: 50px;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 650px)
+    {
+        h1{
+            text-align: center;
+        }
+        .t_2{
+            display: block;
+            font-size: 2rem;
+        }
+    
+        .t_3{
+            display: block;
+            font-size: 1.5rem;
+        }
+    
+        .t_4{
+            font-size: 1.5rem;
+        }
+
+        .button{
+            width: 80%;
+            margin: auto;
+            height: 50px;
+
+            &::before{
+                width: 100%;
+                margin: auto;
+                font-size: 1.5rem;
+                height: 50px;
+            }
+        }
+
+    }
+
+
 
     .control
     {
@@ -73,6 +160,8 @@
         height: 100%;
         background-color: blue;
         position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
         top: 0;
         left: 0;
         right: 0;
@@ -82,5 +171,6 @@
         background-position-x: center;
         background-position-y: center;
         z-index: -1;
+
     }
 }

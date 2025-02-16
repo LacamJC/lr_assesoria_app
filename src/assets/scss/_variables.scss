@@ -6,6 +6,10 @@ $cor2 : #FCCEB4;
 $cor3 : #FFF8F0;
 $cor4 : #292929;
 
+
+
+$time_animation : .5s;
+
 $fonte1 : "Instrument Serif", cursive;
 $fonte2 : "Inter", cursive;
 
@@ -53,3 +57,57 @@ $fonte2 : "Inter", cursive;
     letter-spacing: 2px;
 }
 
+@keyframes show_ease {
+    from{
+        opacity: 0;
+        transform: scale(.8);
+    }
+    
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes from_top {
+    from{
+        transform: translateY(-100%);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes from_bottom {
+    from{
+        transform: translateY(100%);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+
+@keyframes zoom_in {
+    from{
+        transform: scale(1);
+        background-size: 100%;
+        
+    }
+    
+    to{
+        background-size: 110%;
+        transform: scale(1.5);
+    }
+    
+}
+
+.animar{
+    animation: from_bottom 1s ease ;
+}
+
+.show{
+    animation: show_ease 1s ease;
+}

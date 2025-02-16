@@ -9,6 +9,10 @@
     // background-color: rgba(0, 255, 221, 0.329);
     padding: 0px 150px;
     // overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    animation: from_top $time_animation ease-out;
 
     @media screen and (max-width:768px){
         padding: 0px 50px;

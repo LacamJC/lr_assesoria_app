@@ -1,11 +1,37 @@
 
 import styles from '../../assets/scss/pages/Sobre.module.css'
-
+import { useEffect, useRef } from 'react'
 const Sobre = () =>{
+
+    const elementRef = useRef(null)
+
+    useEffect(()=>{
+        const observer = new IntersectionObserver(entries  => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    elementRef.current.classList.add(`${styles.animar}`)
+                    
+                }else{
+                    elementRef.current.classList.remove('animted');
+                }
+            })
+        })
+
+        if(elementRef.current) {
+            observer.observe(elementRef.current)
+        }
+
+        return ()=>{
+            if(elementRef.current){
+                observer.unobserve(elementRef.current)
+            }
+        }
+    },[])
+
     return(
         <>
             <article className={`${styles.background} row w-100 mx-auto`} id='sobre'>
-                <div className={`${styles.content} col-10 `}>
+                <div className={`${styles.content} col-10 `} ref={elementRef}>
                     <div className="row w-100" >
                         <div className={`col col-md-6 col-12 ${styles.article}`}>
                             <h2>Sobre a LR Assesoria</h2>

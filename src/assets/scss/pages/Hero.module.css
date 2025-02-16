@@ -38,14 +38,59 @@
   letter-spacing: 2px;
 }
 
+@keyframes show_ease {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes from_top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes from_bottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes zoom_in {
+  from {
+    transform: scale(1);
+    background-size: 100%;
+  }
+  to {
+    background-size: 110%;
+    transform: scale(1.5);
+  }
+}
+.animar {
+  animation: from_bottom 1s ease;
+}
+
+.show {
+  animation: show_ease 1s ease;
+}
+
 .hero {
   width: 100%;
-  height: 700px;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 300px;
 }
 .hero h1, .hero h2 {
   color: #FFF8F0;
@@ -55,42 +100,104 @@
   font-weight: normal;
   letter-spacing: 4px;
 }
-.hero h1 {
-  text-align: center;
-  font-size: 2rem;
+.hero .t_1, .hero .t_2, .hero .t_3, .hero .t_4 {
+  font-size: 5rem;
+  font-family: "Instrument Serif", cursive;
+  animation: show_ease 0.5s ease;
 }
-@media screen and (min-width: 600px) {
-  .hero h1 {
-    width: 51%;
-    margin: auto;
-    margin-bottom: 20px;
-  }
+.hero .t_2 {
+  display: block;
+  font-size: 6rem;
 }
-.hero h2 {
-  text-align: center;
-  font-size: 1.7rem;
+.hero .t_3 {
+  display: block;
+  font-size: 4.7rem;
 }
-@media screen and (max-width: 657px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-  .hero h2 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-  }
+.hero .t_4 {
+  font-size: 6rem;
 }
-.hero button {
-  max-width: 500px;
-  margin: auto;
-  font-size: 1.3rem;
-  margin-top: 20px;
-  transition: 0.5s ease all;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
-}
-.hero button:hover {
-  cursor: pointer;
+.hero .button {
   background-color: #59372F;
-  color: #FFF8F0;
+  width: 500px;
+  height: 75px;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
+  animation: show_ease 0.5s ease;
+}
+.hero .button::before {
+  content: "Realize seu sonho";
+  border-radius: 5px;
+  font-family: "Inter", cursive;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FCCEB4;
+  color: #59372F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 75px;
+  font-size: 2rem;
+  transform: translate(10px, -10px);
+  transition: 0.5s ease all;
+}
+.hero .button:hover::before {
+  transform: translate(0px, 0px);
+  background-color: #59372F;
+  color: #FCCEB4;
+}
+@media screen and (max-width: 1200px) {
+  .hero .t_2 {
+    display: block;
+    font-size: 4rem;
+  }
+  .hero .t_3 {
+    display: block;
+    font-size: 2.7rem;
+  }
+  .hero .t_4 {
+    font-size: 3rem;
+  }
+  .hero .button {
+    width: 400px;
+    height: 50px;
+  }
+  .hero .button::before {
+    width: 400px;
+    font-size: 1.5rem;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .hero h1 {
+    text-align: center;
+  }
+  .hero .t_2 {
+    display: block;
+    font-size: 2rem;
+  }
+  .hero .t_3 {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .hero .t_4 {
+    font-size: 1.5rem;
+  }
+  .hero .button {
+    width: 80%;
+    margin: auto;
+    height: 50px;
+  }
+  .hero .button::before {
+    width: 100%;
+    margin: auto;
+    font-size: 1.5rem;
+    height: 50px;
+  }
 }
 .hero .control {
   display: flex;
@@ -102,6 +209,8 @@
   height: 100%;
   background-color: blue;
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
   top: 0;
   left: 0;
   right: 0;

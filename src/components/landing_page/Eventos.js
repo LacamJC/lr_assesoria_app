@@ -4,6 +4,8 @@ import icone_casamento from '../../assets/img/icones/casamento_black.png'
 import icone_panela from '../../assets/img/icones/panela_black.png'
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel"
+
+import AnimatedComponent from '../objects/AnimatedComponent';
 const Eventos = () =>{
     const responsive = {
         superLargeDesktop: {
@@ -14,7 +16,7 @@ const Eventos = () =>{
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 1,
+          items: 3,
           partialVisibilityGutter: 30
         },
         tablet: {
@@ -57,6 +59,8 @@ const Eventos = () =>{
     return(
         <>
             <article className={`${styles.content}`} id='eventos'>
+                
+        <AnimatedComponent>
                 <h2 className={`${styles.subtitulo}`}>Eventos</h2>
                 <p className={`${styles.paragrafo}`}>Vamos além de um simples serviço de assesoria, cuidados de tudo que você precisa para ter o evento dos seus sonhos</p>
 
@@ -91,6 +95,8 @@ const Eventos = () =>{
                     />
                 ))}
                 </Carousel>
+                
+        </AnimatedComponent>
             </article>
         </>
     )

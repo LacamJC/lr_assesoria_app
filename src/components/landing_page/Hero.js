@@ -5,11 +5,12 @@ const Hero = () =>{
         <>
             <main className={`${styles.hero}`}>
                 <div className={`${styles.control}`}>
-                    <h1>
-                        TRANSFORME SEU EVENTO EM UM MOMENTO INESQUECÍVEL
+                    <h1 className={`${styles.t_1}`}>
+                        <span className={`${styles.t_2}`}>TRANSFORME SEU EVENTO</span> <span className={`${styles.t_3}`}>EM UM MOMENTO INESQUECÍVEL</span>
+                        <span className={`${styles.t_4}`}> COM A LR ASSESORIA</span>
                     </h1>
-                    <h2>COM A LR ASSESSORIA</h2>
-                    <button className={`${styles.button_bege}`}>Descubra como podemos te ajudar</button>
+                    
+                    <button className={`${styles.button}`}></button>
                 </div>
             </main>
         </>

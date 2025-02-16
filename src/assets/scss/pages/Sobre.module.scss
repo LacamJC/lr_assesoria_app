@@ -19,6 +19,7 @@
         filter: brightness(75%);
         background-image: url("https://media.istockphoto.com/id/479977238/pt/foto/quadro-para-uma-festa-de-evento-ou-recep%C3%A7%C3%A3o-de-casamento.jpg?s=2048x2048&w=is&k=20&c=ejsL1cv-W7M9CdQED8-PHa8pPMWUN-dO1yx9IKtNIZc=");
     }   
+   
 
     .content
     {
@@ -30,6 +31,9 @@
         padding: 60px 120px;
         margin-top: 150px;
         border-radius: 10px 10px 0px 0px;
+
+      
+
        
         .foto_destaque {
             width: 350px;
@@ -66,4 +70,6 @@
         }
     }
 }
+
+
 
