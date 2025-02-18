@@ -110,6 +110,10 @@
   margin-top: 150px;
   border-radius: 10px 10px 0px 0px;
 }
+.background .content h2 {
+  font-family: "Instrument Serif", cursive;
+  font-weight: bold;
+}
 .background .content .foto_destaque {
   width: 350px;
   height: 350px;

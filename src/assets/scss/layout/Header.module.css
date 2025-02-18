@@ -86,10 +86,10 @@
 .cabecalho {
   display: flex;
   flex-direction: row;
-  height: 150px;
+  height: 90px;
   background-color: #59372F;
   padding: 0px 150px;
-  position: absolute;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000000;

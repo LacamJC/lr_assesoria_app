@@ -4,12 +4,13 @@
 {
     display: flex;
     flex-direction: row;
-    height: 150px;
+    height: 90px;
+    
     background-color: $cor1;
     // background-color: rgba(0, 255, 221, 0.329);
     padding: 0px 150px;
     // overflow: hidden;
-    position: absolute;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000000;
