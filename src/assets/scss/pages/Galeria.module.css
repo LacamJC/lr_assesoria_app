@@ -133,6 +133,12 @@
     font-size: 1.5rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .galeria::after {
+    align-items: start;
+    padding-top: 70px;
+  }
+}
 .galeria:hover::after {
   opacity: 0;
   z-index: -1;

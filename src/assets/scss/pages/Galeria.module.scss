@@ -45,6 +45,11 @@
             font-size: 1.5rem;
         }
         align-items: center;
+        @media screen and (max-width: 600px)
+        {
+            align-items: start;
+            padding-top: 70px;
+        }
         justify-content: center;
         color: white;
         background-color: rgba(0, 0, 0, 0.425);
