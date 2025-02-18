@@ -29,6 +29,8 @@
             letter-spacing: 4px;
         }
         // background-color: white;
+
+        
     }
 
     span{
@@ -62,7 +64,111 @@
             @media screen and (max-width: 768px)
             {
                 width: 100%;
+                padding: 25px 15px;
             }
+            h3{
+                font-family: $fonte1;
+                font-size: 2.5rem;
+
+            }
+            
+            p{
+                @include paragrafo;
+            }
+
+            // .servico_imagem {
+            //     // border: 4px solid black;
+            //     width: 100%;
+            //     height: 500px;
+            //     background-color: red;
+
+            //     @media screen and (max-width: 1200px)
+            //     {
+            //         margin-top: 20px;
+            //         height: 400px;
+            //     }
+            // }
+
+
+            .grid{
+                // background-color: blue;
+                display: grid;
+                grid-template-columns: repeat(3, 33%); /* 3 colunas flexíveis */
+                grid-template-rows: repeat(4, auto); /* 2 linhas com altura automática */
+                gap: 10px;
+                height: 500px;
+
+                
+
+                .grid_1{
+                    background-color: green;
+                    grid-column: 1 / 4; /* Ocupará da coluna 1 até a 3 */
+                    grid-row: 1 / 4; /* Ocupará a primeira linha */
+                    // grid-area: 1 / 4 / 1 / 4;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                   
+                }
+                .grid_2{
+                    background-color: pink;
+                    grid-column: 1 / 2;
+                    grid-row: 4 / 4;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .grid_3{
+                    background-color: yellow;
+                    grid-column: 2 / 3;
+                    grid-row: 4 / 4;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .grid_4{
+                    grid-column: 3 / 4;
+                    grid-row: 4 / 4;
+                    background-color: brown;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .image_grid
+                {
+                    width: 100%;
+                }
+
+                .select{
+                    filter: brightness(50%);
+                }
+            }
+
+            ul{
+                list-style-image: url("../../img/list_icons.webp");
+                list-style-position: inside;
+                padding: 0;
+                margin-top: 25px;
+                li{
+                    margin: 15px 0px;
+                    text-align: justify;
+                    line-height: 2rem;
+                    font-size: 1.2;
+                    font-family: $fonte2;
+                }
+                
+            }
+            
 
         }
     }

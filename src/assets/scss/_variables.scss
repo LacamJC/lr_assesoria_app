@@ -29,8 +29,17 @@ $fonte2 : "Inter", cursive;
     font-size: 1.1rem;
     font-family: $fonte2;
     color: $cor4;
+    
+    text-align: justify;
 }
 
+@mixin paragrafo {
+    font-size: 1.1rem;
+    font-family: $fonte2;
+    color: $cor4;
+    
+    text-align: justify;
+}
 
 .button_bege{
     background-color: $cor2;

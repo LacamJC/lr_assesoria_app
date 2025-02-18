@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .titulo {
   font-family: "Instrument Serif", cursive;
@@ -11,6 +12,7 @@
   font-size: 1.1rem;
   font-family: "Inter", cursive;
   color: #292929;
+  text-align: justify;
 }
 
 .button_bege {
@@ -132,5 +134,82 @@
 @media screen and (max-width: 768px) {
   .background .carousel_item .carousel_content {
     width: 100%;
+    padding: 25px 15px;
   }
+}
+.background .carousel_item .carousel_content h3 {
+  font-family: "Instrument Serif", cursive;
+  font-size: 2.5rem;
+}
+.background .carousel_item .carousel_content p {
+  font-size: 1.1rem;
+  font-family: "Inter", cursive;
+  color: #292929;
+  text-align: justify;
+}
+.background .carousel_item .carousel_content .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 33%); /* 3 colunas flexíveis */
+  grid-template-rows: repeat(4, auto); /* 2 linhas com altura automática */
+  gap: 10px;
+  height: 500px;
+}
+.background .carousel_item .carousel_content .grid .grid_1 {
+  background-color: green;
+  grid-column: 1/4; /* Ocupará da coluna 1 até a 3 */
+  grid-row: 1/4; /* Ocupará a primeira linha */
+  overflow: hidden;
+}
+.background .carousel_item .carousel_content .grid .grid_1 img {
+  width: 100%;
+  height: 100%;
+}
+.background .carousel_item .carousel_content .grid .grid_2 {
+  background-color: pink;
+  grid-column: 1/2;
+  grid-row: 4/4;
+  overflow: hidden;
+}
+.background .carousel_item .carousel_content .grid .grid_2 img {
+  width: 100%;
+  height: 100%;
+}
+.background .carousel_item .carousel_content .grid .grid_3 {
+  background-color: yellow;
+  grid-column: 2/3;
+  grid-row: 4/4;
+  overflow: hidden;
+}
+.background .carousel_item .carousel_content .grid .grid_3 img {
+  width: 100%;
+  height: 100%;
+}
+.background .carousel_item .carousel_content .grid .grid_4 {
+  grid-column: 3/4;
+  grid-row: 4/4;
+  background-color: brown;
+  overflow: hidden;
+}
+.background .carousel_item .carousel_content .grid .grid_4 img {
+  width: 100%;
+  height: 100%;
+}
+.background .carousel_item .carousel_content .grid .image_grid {
+  width: 100%;
+}
+.background .carousel_item .carousel_content .grid .select {
+  filter: brightness(50%);
+}
+.background .carousel_item .carousel_content ul {
+  list-style-image: url("../../img/list_icons.webp");
+  list-style-position: inside;
+  padding: 0;
+  margin-top: 25px;
+}
+.background .carousel_item .carousel_content ul li {
+  margin: 15px 0px;
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.2;
+  font-family: "Inter", cursive;
 }/*# sourceMappingURL=Servicos.module.css.map */

@@ -30,25 +30,70 @@ const Servicos = () =>{
         }
       };
 
+    const image_template = "https://placdehold.co/600x600"
     const servicos = [
         {
+            id: "1",
             titulo : "Assesoria Personalizada",
-            items : ["Planejamento e organização – Auxiliamos desde a escolha do local até a definição do cronograma do evento, garantindo que tudo aconteça de forma impecável.","Assessoria personalizada – Oferecemos suporte antes e durante o casamento, ajudando na contratação de fornecedores, alinhamento de prazos e gerenciamento do orçamento.","Decoração e ambientação – Criamos um ambiente único e personalizado, com uma decoração que reflete o estilo e a personalidade do casal.","Cerimonial do dia – Coordenamos cada momento do evento para que os noivos e convidados aproveitem sem preocupações.","Indicação e gerenciamento de fornecedores – Conectamos você aos melhores fotógrafos, buffets, músicos e outros profissionais essenciais para o sucesso do seu casamento."],
-            paragrafo : "Nossa assessoria de eventos oferece um serviço completo para que seu grande dia seja perfeito, cuidando de cada detalhe com dedicação e profissionalismo. Entre os serviços que prestamos para casamentos, estão:"
+            items : [
+                "Personalização das tarefas de assessoria de acordo com o estágio dos preparativos.",
+                "Divisão das responsabilidades entre o assessor e os noivos, com o apoio contínuo da JR Acessoria.",
+                "Flexibilidade para se adaptar às necessidades de cada casal, garantindo que todas as etapas do evento sejam cuidadosamente acompanhadas."
+              
+            ],
+            paragrafo : "Ideal para casais que já fizeram algumas contratações e precisam de auxílio em alguma etapa do processo.",
+            img_1 : "https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img_2 : "https://images.pexels.com/photos/7648051/pexels-photo-7648051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img_3 : "https://images.pexels.com/photos/28976231/pexels-photo-28976231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         },
-        {
-           titulo: "Chá Revelação",
-  items: [
-    "Planejamento e organização – Cuidamos de cada detalhe para que seu chá revelação seja emocionante e inesquecível.",
-    "Assessoria personalizada – Oferecemos suporte antes e durante o evento, ajudando na definição do tema, escolha de fornecedores e gerenciamento do orçamento.",
-    "Temas e decoração personalizados – Criamos um ambiente único e encantador, combinando cores, enfeites e detalhes que refletem a personalidade da família.",
-    "Cerimonial da revelação – Organizamos o grande momento da revelação do bebê, garantindo que seja cheio de surpresas e emoção.",
-    "Indicação e coordenação de fornecedores – Conectamos você aos melhores profissionais, como buffets, fotógrafos e produtores de lembrancinhas."
-  ],
-  paragrafo: "Nossa assessoria de eventos oferece um serviço completo para que seu chá revelação seja um momento especial e memorável. Cuidamos de cada detalhe com carinho e profissionalismo para garantir uma experiência única e cheia de emoção."
 
+
+        {
+            id: "2",
+           titulo: "Cerimonial",
+            items: ["Suporte completo desde a escolha dos fornecedores até a criação de um cronograma eficiente.","Orientação para definir o estilo e os detalhes do evento.","Lista de fornecedores recomendados e garantidos pela experiência da JR Acessoria."],
+            paragrafo: "Ideal para quem já fez as contratações e precisa de auxílio no momento do cortejo.",
+            img_1 : "https://images.pexels.com/photos/1616113/pexels-photo-1616113.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img_2 : "https://images.pexels.com/photos/313707/pexels-photo-313707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img_3 : "https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+
+        },
+
+        {
+            id: "3",
+            titulo: "Assesoria do dia",
+            items: [
+                "Coordenação dos fornecedores e cronograma no dia do evento.",
+                "Garantia de que tudo esteja no lugar certo, no horário certo, para que os organizadores e convidados possam aproveitar o evento ao máximo."
+            ],
+            paragrafo: "Ideal para quem já fez as contratações e precisa de auxílio na reta final, garantindo que o evento seja aproveitado de maneira tranquila e sem estresse.",
+            img_1 : "https://images.pexels.com/photos/7551751/pexels-photo-7551751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img_2 : "https://images.pexels.com/photos/7648221/pexels-photo-7648221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img_3 : "https://images.pexels.com/photos/7551764/pexels-photo-7551764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         }
     ]
+
+    const select = (e) => {
+        const { src, className } = e.target
+        var id = className.split(" ")[1]
+        
+        const foco = document.getElementById(id)
+
+
+        var divs = document.getElementsByClassName(`${styles.select}`)
+        // var mesmo_index = document.getElementsByClassName("1")
+
+        for(let i=0; i < divs.length; i++)
+        {
+            divs[i].classList.remove(`${styles.select}`)
+            // console.log(mesmo_index)
+        }
+
+        e.target.classList.add(`${styles.select}` )
+        
+        foco.src =  src
+        
+    }
 
     return(
         <>
@@ -56,28 +101,39 @@ const Servicos = () =>{
                 <div className={`${styles.content}`}>
                     <h2 className={`${styles.subtitulo}`}>Serviços</h2>
                  
-              
-
-
-
-                    <Carousel interval={3000}>
+                    <Carousel interval={100000000}>
                         
                         {servicos.map((servico)=>(
-                            <Carousel.Item className={`${styles.carousel_item}`}>
+                            <Carousel.Item className={`${styles.carousel_item}`} key={servico.id}>
                                 <div className={`${styles.carousel_content}`}>
-                                <h1>{servico.titulo}</h1>
-
-                                    <p>{servico.paragrafo}</p>
-                                    {/* <Carousel.Caption>
-                                    <h3>First slide label</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                    </Carousel.Caption> */}
-
-                                    <ul>
-                                        {servico.items.map((item)=>(
-                                            <li>{item}</li>
-                                        ))}
-                                    </ul>
+                                    <div className="row">
+                                        <div className="col col-xl-6 col-12">
+                                            <h3>{servico.titulo}</h3>
+                                            <p>{servico.paragrafo}</p>
+                                            <ul>
+                                                {servico.items.map((item)=>(
+                                                    <li className={`${styles.servico_list_item}`}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div className={`col col-xl-6 col-12 `}>
+                                            <div className={`${styles.grid}`}>
+                                                <div className={`${styles.grid_1}`}>
+                                                    {/* <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width={"100%"} height={"100%"}/> */}
+                                                    <img className={`${styles.image_grid} ${servico.id}`} id={servico.id} src={servico.img_1}/>
+                                                </div>
+                                                <div className={`${styles.grid_2}`}>
+                                                <img className={`${styles.image_grid} ${servico.id} ${styles.select}`} src={servico.img_1} onClick={select}/>
+                                                </div>
+                                                <div className={`${styles.grid_3}`}>
+                                                <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_2} onClick={select}/>
+                                                </div>
+                                                <div className={`${styles.grid_4}`}>
+                                                <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_3} onClick={select}/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </Carousel.Item>
                             
