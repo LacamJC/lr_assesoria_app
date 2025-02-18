@@ -104,7 +104,7 @@
   content: "Sonhos realizados";
   display: flex;
   font-family: "Instrument Serif", cursive;
-  font-size: 10em;
+  font-size: 10rem;
   align-items: center;
   justify-content: center;
   color: white;
@@ -112,6 +112,26 @@
   z-index: 200;
   opacity: 1;
   transition: 1s ease all !important;
+}
+@media screen and (max-width: 1040px) {
+  .galeria::after {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 820px) {
+  .galeria::after {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .galeria::after {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .galeria::after {
+    font-size: 1.5rem;
+  }
 }
 .galeria:hover::after {
   opacity: 0;
