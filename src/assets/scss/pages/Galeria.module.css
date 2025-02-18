@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.titulo {
+  font-family: "Instrument Serif", cursive;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 3rem;
+  letter-spacing: 2.5px;
+}
+
+.paragrafo {
+  font-size: 1.1rem;
+  font-family: "Inter", cursive;
+  color: #292929;
+  text-align: justify;
+}
+
+.button_bege {
+  background-color: #FCCEB4;
+  color: #59372F;
+  border: none;
+  min-height: 50px;
+  min-width: 200px;
+  padding: 5px 20px;
+  font-family: "Inter", cursive;
+  border-radius: 5px;
+  transition: 0.5s ease all;
+}
+.button_bege:hover {
+  cursor: pointer;
+  background-color: #59372F;
+  color: #FFF8F0;
+}
+
+.subtitulo {
+  font-family: "Instrument Serif", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+@keyframes show_ease {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes from_top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes from_bottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes zoom_in {
+  from {
+    transform: scale(1);
+    background-size: 100%;
+  }
+  to {
+    background-size: 110%;
+    transform: scale(1.5);
+  }
+}
+.animar {
+  animation: from_bottom 1s ease;
+}
+
+.show {
+  animation: show_ease 1s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: black;
+  width: 100%;
+  margin: 0;
+  grid-auto-rows: 300px;
+  position: relative;
+}
+.galeria::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "Sonhos realizados";
+  display: flex;
+  font-family: "Instrument Serif", cursive;
+  font-size: 10em;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.425);
+  z-index: 200;
+  opacity: 1;
+  transition: 1s ease all !important;
+}
+.galeria:hover::after {
+  opacity: 0;
+  z-index: -1;
+}
+.galeria .galeria__item {
+  position: relative;
+  background-color: blue;
+}
+.galeria .galeria__item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.galeria .galeria__item .title {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(56, 56, 56, 0.562);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10pt;
+  font-size: 16px;
+  transition: 0.5s linear;
+}
+@media screen and (max-width: 1300px) {
+  .galeria .galeria__item .title .content {
+    padding: 15px 5px;
+  }
+  .galeria .galeria__item .title .content h3 {
+    font-size: 1.4rem;
+  }
+  .galeria .galeria__item .title .content h4 {
+    font-size: 1.3rem;
+  }
+  .galeria .galeria__item .title .content p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+.galeria .galeria__item .title .content h3 {
+  font-family: "Instrument Serif", cursive;
+  font-size: 2rem;
+  color: #FFF8F0;
+}
+.galeria .galeria__item .title .content .aspas {
+  color: #FCCEB4;
+  font-size: 2rem;
+}
+.galeria .galeria__item .title .content h4 {
+  font-family: "Inter", cursive;
+  color: #FCCEB4;
+}
+.galeria .galeria__item .title .content p {
+  font-family: "Inter", cursive;
+  text-align: justify;
+  width: 80%;
+}
+.galeria .galeria__item:hover .title {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .galeria .galeria__item:nth-child(1) {
+    background-color: pink;
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+  .galeria .galeria__item:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: red;
+  }
+  .galeria .galeria__item:nth-child(3) {
+    background-color: yellow;
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+  .galeria .galeria__item:nth-child(4) {
+    background-color: aqua;
+    grid-row: span 1;
+    grid-column: span 4;
+  }
+}
+@media screen and (max-width: 600px) {
+  .galeria .galeria__item:nth-child(2), .galeria .galeria__item:nth-child(3) {
+    grid-row: span 1;
+    grid-column: span 4;
+  }
+}
+
+.h_1 {
+  grid-row: span 1;
+}
+
+.h_2 {
+  grid-row: span 2;
+}
+
+.h_3 {
+  grid-row: span 3;
+}
+
+.h_4 {
+  grid-row: span 4;
+}
+
+.w_1 {
+  grid-column: span 1;
+}
+
+.w_2 {
+  grid-column: span 2;
+}
+
+.w_3 {
+  grid-column: span 3;
+}
+
+.w_4 {
+  grid-column: span 4;
+}
+
+@keyframes magica {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=Galeria.module.css.map */

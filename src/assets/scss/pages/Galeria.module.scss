@@ -1,0 +1,222 @@
+@import "../variables";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    grid-auto-rows: 300px;
+  
+    // width: 100%;
+    // grid-gap: 5px;
+
+    position: relative;
+    &::after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "Sonhos realizados";
+        display: flex;
+        font-family: $fonte1;
+        font-size: 10em;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.425);
+        z-index: 200;
+        opacity: 1;
+        transition: 1s ease all !important;
+        
+
+        
+    }
+
+    &:hover{
+        &::after{
+            // opacity: 0;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
+    
+
+    .galeria__item{
+        position: relative;
+        background-color: blue;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .title{
+            opacity: 0;
+            position: absolute;
+            background-color: rgba(56, 56, 56, 0.562);
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white ;
+            padding: 10pt;
+            font-size: 16px;
+
+            transition: 0.5s linear;
+
+            .content{
+                // background-color: white;
+                @media screen and (max-width: 1300px)
+                {
+                    padding: 15px 5px;
+
+                    h3{
+                        font-size: 1.4rem;
+                    }
+
+                    h4{
+                        font-size: 1.3rem;
+                    }
+
+                    p{
+                        width: 100%;
+                        font-size: .9rem;
+                    }
+                }
+                h3{
+                    // color: red;
+                    font-family: $fonte1;
+                    font-size: 2rem;
+                    color: $cor3;
+                }
+
+                .aspas{
+                    color: $cor2;
+                    font-size: 2rem;
+                }
+    
+                h4{
+                    // color: aliceblue;
+                    font-family: $fonte2;
+                    color: $cor2;
+                    
+                }
+    
+                p{
+                    // color: green;
+                    font-family: $fonte2;
+                    text-align: justify;
+                    width: 80%;
+                }
+            }
+           
+        }
+
+        &:hover{
+            .title{
+                opacity: 1;
+            }
+        }
+
+      
+    }
+
+    @media screen and (max-width: 768px)
+    {
+        .galeria__item:nth-child(1)
+        {
+            background-color: pink;
+            grid-column: span 4;
+            grid-row: span 1;
+        }
+
+        .galeria__item:nth-child(2)
+        {
+            grid-column: span 2;
+            grid-row: span 1;
+            background-color: red;
+        }
+
+        .galeria__item:nth-child(3)
+        {
+            background-color: yellow;
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+
+        .galeria__item:nth-child(4)
+        {
+            background-color: aqua;
+            grid-row: span 1;
+            grid-column: span 4;
+        }
+    }
+
+    @media screen and (max-width: 600px)
+    {
+        .galeria__item:nth-child(2), .galeria__item:nth-child(3){
+            grid-row: span 1;
+            grid-column: span 4;
+        }
+    }
+}
+
+
+
+.h_1
+{
+    grid-row: span 1;
+}
+
+.h_2
+{
+    grid-row: span 2;
+}
+
+.h_3{
+    grid-row: span 3;
+}
+
+.h_4{
+    grid-row: span 4
+}
+
+.w_1
+{
+    grid-column: span 1;
+}
+
+
+.w_2 
+{
+    grid-column: span 2;
+}
+
+.w_3{
+    grid-column: span 3;
+}
+
+.w_4{
+    grid-column: span 4
+}
+
+
+@keyframes magica {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
