@@ -200,6 +200,18 @@
     height: 50px;
   }
 }
+@media screen and (max-width: 400px) {
+  .hero .t_2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 0px 10px;
+    margin: auto;
+  }
+  .hero .t_3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+}
 .hero .control {
   display: flex;
   flex-direction: column;

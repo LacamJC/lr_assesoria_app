@@ -146,6 +146,65 @@
   font-family: "Inter", cursive;
   color: #292929;
   text-align: justify;
+  height: 75px;
+  margin-bottom: 0;
+}
+.background .carousel_item .carousel_content ul {
+  height: 210px;
+  list-style-image: url("../../img/list_icons.webp");
+  list-style-position: inside;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 80px;
+}
+.background .carousel_item .carousel_content ul li {
+  margin: 15px 0px;
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.2;
+  font-family: "Inter", cursive;
+}
+.background .carousel_item .carousel_content .button {
+  width: 100px;
+  background-color: #59372F;
+  color: #59372F;
+  font-family: "Inter", cursive;
+  width: 100%;
+  height: 60px;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .background .carousel_item .carousel_content .button {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+}
+.background .carousel_item .carousel_content .button::before {
+  content: "FAÇA ACONTECER";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FCCEB4;
+  width: 100%;
+  height: 100%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Instrument Serif", cursive;
+  letter-spacing: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(5px, -5px);
+  border-radius: 0.375rem;
+  transition: 0.5s ease all;
+}
+.background .carousel_item .carousel_content .button:hover::before {
+  transform: translate(0);
+  background-color: #59372F;
+  color: #FCCEB4;
 }
 .background .carousel_item .carousel_content .grid {
   display: grid;
@@ -153,15 +212,26 @@
   grid-template-rows: repeat(4, auto); /* 2 linhas com altura automática */
   gap: 10px;
   height: 500px;
+  width: 570px;
+}
+@media screen and (max-width: 1200px) {
+  .background .carousel_item .carousel_content .grid {
+    margin-top: 50px;
+  }
 }
 @media screen and (max-width: 400px) {
   .background .carousel_item .carousel_content .grid {
-    width: 320px;
+    width: 275px;
+    height: 275px;
     padding-left: 2px;
   }
 }
+.background .carousel_item .carousel_content .grid .grid_1, .background .carousel_item .carousel_content .grid .grid_2, .background .carousel_item .carousel_content .grid .grid_3, .background .carousel_item .carousel_content .grid .grid_4 {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
+  border-radius: 1rem;
+}
 .background .carousel_item .carousel_content .grid .grid_1 {
-  background-color: green;
+  background-color: white;
   grid-column: 1/4; /* Ocupará da coluna 1 até a 3 */
   grid-row: 1/4; /* Ocupará a primeira linha */
   overflow: hidden;
@@ -171,7 +241,7 @@
   height: 100%;
 }
 .background .carousel_item .carousel_content .grid .grid_2 {
-  background-color: pink;
+  background-color: white;
   grid-column: 1/2;
   grid-row: 4/4;
   overflow: hidden;
@@ -181,7 +251,7 @@
   height: 100%;
 }
 .background .carousel_item .carousel_content .grid .grid_3 {
-  background-color: yellow;
+  background-color: white;
   grid-column: 2/3;
   grid-row: 4/4;
   overflow: hidden;
@@ -193,29 +263,25 @@
 .background .carousel_item .carousel_content .grid .grid_4 {
   grid-column: 3/4;
   grid-row: 4/4;
-  background-color: brown;
+  background-color: white;
   overflow: hidden;
 }
 .background .carousel_item .carousel_content .grid .grid_4 img {
   width: 100%;
   height: 100%;
 }
+.background .carousel_item .carousel_content .grid .grid_2:hover, .background .carousel_item .carousel_content .grid .grid_3:hover, .background .carousel_item .carousel_content .grid .grid_4:hover {
+  cursor: pointer;
+}
+.background .carousel_item .carousel_content .grid .grid_2 img, .background .carousel_item .carousel_content .grid .grid_3 img, .background .carousel_item .carousel_content .grid .grid_4 img {
+  filter: brightness(50%) blur(1px);
+  transform: scale(1.1);
+  transition: 0.5s ease all;
+}
 .background .carousel_item .carousel_content .grid .image_grid {
   width: 100%;
 }
 .background .carousel_item .carousel_content .grid .select {
-  filter: brightness(50%);
-}
-.background .carousel_item .carousel_content ul {
-  list-style-image: url("../../img/list_icons.webp");
-  list-style-position: inside;
-  padding: 0;
-  margin-top: 25px;
-}
-.background .carousel_item .carousel_content ul li {
-  margin: 15px 0px;
-  text-align: justify;
-  line-height: 2rem;
-  font-size: 1.2;
-  font-family: "Inter", cursive;
+  filter: brightness(100%) !important;
+  transform: scale(1.3) !important;
 }/*# sourceMappingURL=Servicos.module.css.map */

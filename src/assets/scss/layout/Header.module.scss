@@ -12,6 +12,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 1000000;
     animation: from_top $time_animation ease-out;
 
     @media screen and (max-width:768px){
@@ -58,10 +59,8 @@
                 text-decoration: none;
                 // color: black;
 
-                &:hover{
-                    text-decoration: underline;
-                    text-decoration-color: $cor2;
-                }
+               
+               
 
                 .menu_list__item
                 {
@@ -73,7 +72,31 @@
                     font-size: 1.5rem;
                     font-weight: 500;
                     letter-spacing: 1px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        transition: .5s ease all;
+                        z-index: -1;
+                        width: 1%;
+                        height: 4px;
+                        border-radius: 0px 10px 10px 0px;
+                        background-color: transparent;
+                        bottom: 0;
+                        left: 0;
+                    } 
+                    &:hover{
+                        &::after{
+                           
+                            width: 100%;
+                            background-color: $cor2;
+                            
+                        } 
+                    }
+                        
                 }
+
+               
             }
         }
     }

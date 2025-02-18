@@ -33,24 +33,30 @@ const Eventos = () =>{
     
     const eventos = [
         {
+            id: 1,
             img : icone_casamento,
             title : "Casamento",
         },
         {
+            id: 2,
             img : icone_panela,
             title : "Chá de Panela",
         }, {
+            id: 3,
             img : icone_casamento,
             title : "Casamento",
         },
         {
+            id: 4,
             img : icone_panela,
             title : "Chá de Panela",
         }, {
+            id: 5,
             img : icone_casamento,
             title : "Casamento",
         },
         {
+            id: 6,
             img : icone_panela,
             title : "Chá de Panela",
         }
@@ -60,7 +66,7 @@ const Eventos = () =>{
         <>
             <article className={`${styles.content}`} id='eventos'>
                 
-        <AnimatedComponent>
+        <AnimatedComponent animationType="show">
                 <h2 className={`${styles.subtitulo}`}>Eventos</h2>
                 <p className={`${styles.paragrafo}`}>Vamos além de um simples serviço de assesoria, cuidados de tudo que você precisa para ter o evento dos seus sonhos</p>
 
@@ -90,6 +96,7 @@ const Eventos = () =>{
                 >
                     {eventos.map((evento)=>(
                     <Card 
+                        key={evento.id}
                         title={evento.title}
                         img={evento.img}
                     />

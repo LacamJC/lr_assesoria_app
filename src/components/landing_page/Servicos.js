@@ -3,34 +3,15 @@ import styles from '../../assets/scss/pages/Servicos.module.css'
 
 import Carousel from 'react-bootstrap/Carousel'; 
 
-
+import AnimatedComponent from "../objects/AnimatedComponent";
 
 const Servicos = () =>{
-    const responsive = {
-        superLargeDesktop: {
-          // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 5,
-          partialVisibilityGutter: 40
-        },
-        desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 3,
-          partialVisibilityGutter: 30
-        },
-        tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 2,
-          partialVisibilityGutter: 30
-        },
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1,
-          partialVisibilityGutter: 30
-        }
-      };
 
-    const image_template = "https://placdehold.co/600x600"
+
+
+
+
+
     const servicos = [
         {
             id: "1",
@@ -97,24 +78,30 @@ const Servicos = () =>{
 
     return(
         <>
-            <article className={`${styles.background}`}>
+       
+            <article className={`${styles.background}`} id="servicos">
+            <AnimatedComponent>
                 <div className={`${styles.content}`}>
                     <h2 className={`${styles.subtitulo}`}>Serviços</h2>
                  
-                    <Carousel interval={100000000}>
+                    <Carousel interval={100000000} >
                         
                         {servicos.map((servico)=>(
                             <Carousel.Item className={`${styles.carousel_item}`} key={servico.id}>
                                 <div className={`${styles.carousel_content}`}>
                                     <div className="row">
-                                        <div className="col col-xl-6 col-12">
+                                        <div className="col col-xl-6 col-12 d-flex flex-column">
                                             <h3>{servico.titulo}</h3>
                                             <p>{servico.paragrafo}</p>
                                             <ul>
                                                 {servico.items.map((item)=>(
-                                                    <li className={`${styles.servico_list_item}`}>{item}</li>
+                                                    <li key={item} className={`${styles.servico_list_item}`}>{item}</li>
                                                 ))}
                                             </ul>
+
+                                            <button className={`${styles.button} btn`}>
+                                                
+                                            </button>
                                         </div>
                                         <div className={`col col-xl-6 col-12 d-flex justify-content-center align-items-center`}>
                                             <div className={`${styles.grid}`}>
@@ -123,13 +110,13 @@ const Servicos = () =>{
                                                     <img className={`${styles.image_grid} ${servico.id}`} id={servico.id} src={servico.img_1}/>
                                                 </div>
                                                 <div className={`${styles.grid_2}`}>
-                                                <img className={`${styles.image_grid} ${servico.id} ${styles.select}`} src={servico.img_1} onClick={select}/>
+                                                <img className={`${styles.image_grid} ${servico.id} ${styles.select}`} src={servico.img_1} onClick={select} alt="Imagem relacionada ao servico em questao"/>
                                                 </div>
                                                 <div className={`${styles.grid_3}`}>
-                                                <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_2} onClick={select}/>
+                                                <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_2} onClick={select} alt="Imagem relacionada ao servico em questao"/>
                                                 </div>
                                                 <div className={`${styles.grid_4}`}>
-                                                <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_3} onClick={select}/>
+                                                <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_3} onClick={select} alt="Imagem relacionada ao servico em questao"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -143,6 +130,8 @@ const Servicos = () =>{
 
                     
                 </div>
+                
+            </AnimatedComponent>
             </article>
         </>
     )

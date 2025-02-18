@@ -92,6 +92,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1000000;
   animation: from_top 0.5s ease-out;
 }
 @media screen and (max-width: 768px) {
@@ -129,10 +130,6 @@
 .cabecalho .large_nav .menu_list .menu_list__link {
   text-decoration: none;
 }
-.cabecalho .large_nav .menu_list .menu_list__link:hover {
-  text-decoration: underline;
-  text-decoration-color: #FCCEB4;
-}
 .cabecalho .large_nav .menu_list .menu_list__link .menu_list__item {
   color: #FCCEB4;
   padding: 5px 10px;
@@ -140,6 +137,23 @@
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 1px;
+  position: relative;
+}
+.cabecalho .large_nav .menu_list .menu_list__link .menu_list__item::after {
+  content: "";
+  position: absolute;
+  transition: 0.5s ease all;
+  z-index: -1;
+  width: 1%;
+  height: 4px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+}
+.cabecalho .large_nav .menu_list .menu_list__link .menu_list__item:hover::after {
+  width: 100%;
+  background-color: #FCCEB4;
 }
 .cabecalho .hiddenNav {
   display: none;
