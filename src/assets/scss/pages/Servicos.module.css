@@ -154,6 +154,12 @@
   gap: 10px;
   height: 500px;
 }
+@media screen and (max-width: 400px) {
+  .background .carousel_item .carousel_content .grid {
+    width: 320px;
+    padding-left: 2px;
+  }
+}
 .background .carousel_item .carousel_content .grid .grid_1 {
   background-color: green;
   grid-column: 1/4; /* Ocupará da coluna 1 até a 3 */

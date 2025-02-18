@@ -98,6 +98,12 @@
                 gap: 10px;
                 height: 500px;
 
+                @media screen and (max-width: 400px)
+                {
+                    width: 320px;
+                    padding-left: 2px;
+                }
+
                 
 
                 .grid_1{
