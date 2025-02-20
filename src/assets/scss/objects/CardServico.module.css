@@ -97,7 +97,7 @@
 }
 
 .show {
-  animation: show_ease 1s ease;
+  animation: show_ease 2s ease;
 }
 
 * {

@@ -1,7 +1,7 @@
 import styles from '../../assets/scss/pages/Hero.module.css'
 
-const Hero = () =>{
-    return(
+const Hero = () => {
+    return (
         <>
             <main className={`${styles.hero}`}>
                 <div className={`${styles.control}`}>
@@ -9,8 +9,8 @@ const Hero = () =>{
                         <span className={`${styles.t_2}`}>TRANSFORME SEU EVENTO</span> <span className={`${styles.t_3}`}>EM UM MOMENTO INESQUECÍVEL</span>
                         <span className={`${styles.t_4}`}> COM A LR ASSESORIA</span>
                     </h1>
-                    
-                    <button className={`${styles.button}`}></button>
+
+                    <a href="#formulario" className={`${styles.button}`}></a>
                 </div>
             </main>
         </>

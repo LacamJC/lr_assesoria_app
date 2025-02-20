@@ -1,5 +1,6 @@
 import styles from '../../assets/scss/layout/Header.module.css'
 import { Link } from 'react-router-dom'
+import { FaPlus } from "react-icons/fa"
 import logo from '../../assets/img/logos_logo_border_white.png'
 const Header = () =>{
     const handleClick = () =>{
@@ -45,7 +46,7 @@ const Header = () =>{
                 {/* Menu para telas menores */}
                 <div className={`${styles.hiddenNav}`}>
                     <input type="checkbox" id='checkbox' className={`${styles.checkbox}`}/>
-
+                    <FaPlus className={`${styles.menu_icon}`}/>
                     <ul className={`${styles.menu_list}`}>
                         <a href="#" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Home</li>

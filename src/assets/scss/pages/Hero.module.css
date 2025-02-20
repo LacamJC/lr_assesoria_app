@@ -97,7 +97,7 @@
 }
 
 .show {
-  animation: show_ease 1s ease;
+  animation: show_ease 2s ease;
 }
 
 .hero {
@@ -108,7 +108,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 300px;
+  padding-top: 200px;
 }
 .hero h1, .hero h2 {
   color: #FFF8F0;

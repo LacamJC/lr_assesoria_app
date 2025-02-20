@@ -4,15 +4,17 @@ import Eventos from "./Eventos"
 import Servicos from "./Servicos"
 import Galeria from "./Galeria"
 import Contato from "./Contato"
-function Landing(){
-    return(
+import Footer from "../layout/Footer"
+function Landing() {
+    return (
         <>
-        <Hero/>
-        <Sobre/>
-        <Eventos/>
-        <Servicos/>
-        <Galeria/>
-        <Contato/>
+            <Hero />
+            <Sobre />
+            <Eventos />
+            <Servicos />
+            <Galeria />
+            <Contato />
+            <Footer /> 
         </>
     )
 }
