@@ -76,6 +76,24 @@ $fonte2 : "Inter", cursive;
     }
 }
 
+.link{
+    font-style: italic;
+    color: $cor1;
+    background-color: transparent;
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: .5s ease all;
+    &:hover{
+        background-color: $cor1;
+        color: $cor3;
+        text-decoration: none;
+
+    }
+}
+
 .subtitulo {
     font-family: "Instrument Serif", cursive;
     font-weight: 600;

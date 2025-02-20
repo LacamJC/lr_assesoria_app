@@ -1,9 +1,45 @@
 import styles from "../../assets/scss/pages/Galeria.module.css"
 
 const Galeria = () => {
+
+    const showDepoimentos = (e) => {
+
+        console.log(e.target.checked)
+        const text = document.getElementById("label_text")
+        const _switch = document.getElementById("switch")
+        const titles = document.getElementsByClassName(`${styles.title}`)
+        if(e.target.checked)
+        {
+            
+            console.log("Mostrando depoimentos")
+            text.innerText = "Esconder Depoimentos"
+            _switch.classList.add(`${styles.txt}`)
+            Array.from(titles).forEach((title) => {
+                console.log(title)
+                title.classList.add(`${styles.force_show}`)
+    
+            })
+        }else{
+            
+            text.innerText = "Mostrar Depoimentos"
+            _switch.classList.remove(`${styles.txt}`)
+            Array.from(titles).forEach((title) => {
+                console.log(title)
+                title.classList.remove(`${styles.force_show}`)
+    
+            })
+        }
+        
+
+        
+    }
     return(
         <>
-            <div className={`${styles.galeria}`}>
+            <div className={`${styles.galeria}`} id="depoimentos">
+                        <div className={`form-check form-switch ${styles.switch}`} id="switch">
+                            <label className={`form-check-label ${styles.label}`} id="label_text" htmlFor="flexSwitchCheckDefault">Mostrar Depoimentos</label>
+                            <input className={`${styles.hidden} form-check-input`} type="checkbox" role="switch" id="flexSwitchCheckDefault" onChange={showDepoimentos}/>
+                        </div>
                 <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_2}`}>
                     <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
                     <span className={`${styles.title}`}>
@@ -61,6 +97,9 @@ const Galeria = () => {
                 </div>
                 
                 <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_4}`}>
+                 
+                       
+                   
                     <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
                     <span className={`${styles.title}`}>
                         <div className={`${styles.content}`}>

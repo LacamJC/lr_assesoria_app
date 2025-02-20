@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 .galeria{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -12,6 +13,72 @@
     width: 100%;
     margin: 0;
     grid-auto-rows: 300px;
+
+    .switch
+    {
+        background-color: $cor1;
+        color: $cor2;
+        position: absolute;
+        z-index: 100;
+        top: 20px;
+        width: 220px;
+        right: 39px;
+        padding: 5px 10px;
+        border-radius: 6px;
+
+        transition: .5s ease all;
+        label{
+            font-weight: bold;
+
+            font-family: $fonte2;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+      
+
+        .hidden{
+            opacity: 0;
+            
+        }
+
+        @media screen and (max-width: 800px){
+            .hidden{
+                opacity: 1;
+                width: 50px;
+                height: 30px;
+                background-color: $cor3;
+                border-color: $cor3;
+
+                &:checked{
+                    background-color: $cor1;
+                    border-color: $cor1;
+                }
+            }
+
+            .label{
+                display: none;
+            }
+
+            width: max-content;
+            background-color: transparent !important;
+            
+
+
+
+        }
+        
+    }
+
+    .txt{
+        background-color: $cor2 ;
+        label{
+            color: $cor1;
+        }
+
+       
+    }
+    
   
     // width: 100%;
     // grid-gap: 5px;
@@ -154,6 +221,22 @@
 
       
     }
+    
+    .force_show{
+        opacity: 1 !important;
+    }
+
+    @media screen and (max-width: 999px)
+    {
+        .galeria__item{
+            .tile{
+                h3{
+                    font-size: 1.6rem !important;
+                }
+            }
+            
+        }
+    }
 
     @media screen and (max-width: 768px)
     {
@@ -181,6 +264,12 @@
         .galeria__item:nth-child(4)
         {
             background-color: aqua;
+            grid-row: span 1;
+            grid-column: span 4;
+        }
+
+        .galeria__item:nth-child(5){
+            background-color: darkblue;
             grid-row: span 1;
             grid-column: span 4;
         }

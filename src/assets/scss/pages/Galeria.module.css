@@ -31,6 +31,23 @@
   color: #FFF8F0;
 }
 
+.link {
+  font-style: italic;
+  color: #59372F;
+  background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 4px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: 0.5s ease all;
+}
+.link:hover {
+  background-color: #59372F;
+  color: #FFF8F0;
+  text-decoration: none;
+}
+
 .subtitulo {
   font-family: "Instrument Serif", cursive;
   font-weight: 600;
@@ -96,6 +113,55 @@
   margin: 0;
   grid-auto-rows: 300px;
   position: relative;
+}
+.galeria .switch {
+  background-color: #59372F;
+  color: #FCCEB4;
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  width: 220px;
+  right: 39px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.5s ease all;
+}
+.galeria .switch label {
+  font-weight: bold;
+  font-family: "Inter", cursive;
+}
+.galeria .switch label:hover {
+  cursor: pointer;
+}
+.galeria .switch .hidden {
+  opacity: 0;
+}
+@media screen and (max-width: 800px) {
+  .galeria .switch {
+    width: -moz-max-content;
+    width: max-content;
+    background-color: transparent !important;
+  }
+  .galeria .switch .hidden {
+    opacity: 1;
+    width: 50px;
+    height: 30px;
+    background-color: #FFF8F0;
+    border-color: #FFF8F0;
+  }
+  .galeria .switch .hidden:checked {
+    background-color: #59372F;
+    border-color: #59372F;
+  }
+  .galeria .switch .label {
+    display: none;
+  }
+}
+.galeria .txt {
+  background-color: #FCCEB4;
+}
+.galeria .txt label {
+  color: #59372F;
 }
 .galeria::after {
   position: absolute;
@@ -206,6 +272,14 @@
 .galeria .galeria__item:hover .title {
   opacity: 1;
 }
+.galeria .force_show {
+  opacity: 1 !important;
+}
+@media screen and (max-width: 999px) {
+  .galeria .galeria__item .tile h3 {
+    font-size: 1.6rem !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .galeria .galeria__item:nth-child(1) {
     background-color: pink;
@@ -224,6 +298,11 @@
   }
   .galeria .galeria__item:nth-child(4) {
     background-color: aqua;
+    grid-row: span 1;
+    grid-column: span 4;
+  }
+  .galeria .galeria__item:nth-child(5) {
+    background-color: darkblue;
     grid-row: span 1;
     grid-column: span 4;
   }

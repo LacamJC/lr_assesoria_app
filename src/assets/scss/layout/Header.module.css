@@ -31,6 +31,23 @@
   color: #FFF8F0;
 }
 
+.link {
+  font-style: italic;
+  color: #59372F;
+  background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 4px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: 0.5s ease all;
+}
+.link:hover {
+  background-color: #59372F;
+  color: #FFF8F0;
+  text-decoration: none;
+}
+
 .subtitulo {
   font-family: "Instrument Serif", cursive;
   font-weight: 600;
