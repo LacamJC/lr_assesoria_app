@@ -1,0 +1,78 @@
+@import "../variables";
+*{
+    font-family: $fonte2;
+}
+.background
+{
+    width: 100%;
+    min-height: 600px;
+    // background-color: red;
+    padding-top: 120px;
+    .content
+    {
+        // background-color: yellow;
+        .side_form
+        {
+            padding: 15px 30px;
+            .label_title{
+                color: $cor1;
+                font-size: 1.2rem;
+            }
+        }
+        .side_card{
+            // background-color: rgba(255, 0, 0, 0.562);
+            position: relative;
+
+            color: white;
+            height: 700px;
+            overflow: hidden;
+            border-radius: 16px;
+            padding: 60px 20px;
+            color: $cor3;
+            h3{
+                text-align: center;
+                font-size: 3rem;
+                margin-bottom: 75px;
+                font-family: $fonte1;
+                
+            }
+
+            p{
+                margin: 0px 25px;
+                text-align: justify;
+                font-size: 1.5rem;
+                font-family: $fonte2;
+                color: white;
+            }
+
+            img{
+                
+                transition: 1s ease all;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                filter: brightness(40%) ;
+
+                
+            }
+
+            &:hover{
+                img{
+                    filter: brightness(20%) blur(2px) grayscale(50%);
+                    
+                }
+            }
+        }
+    }
+}
+
+.blur
+{
+    
+    img{
+        // display: none;
+        transform: scale(1.5) translateX(100px) ;
+        
+    }
+}
