@@ -1,7 +1,6 @@
-@import '../variables';
+@import "../variables";
 
-.hero
-{
+.hero {
     width: 100%;
     min-height: 100vh;
     // background-color: rgba(255, 0, 0, 0.301);
@@ -12,7 +11,8 @@
     align-items: flex-start;
     padding-top: 200px;
 
-    h1,h2{
+    h1,
+    h2 {
         color: $cor3;
         font-family: $fonte1;
         text-align: justify;
@@ -20,28 +20,31 @@
         font-weight: normal;
         letter-spacing: 4px;
     }
-  
-    .t_1, .t_2, .t_3, .t_4{
+
+    .t_1,
+    .t_2,
+    .t_3,
+    .t_4 {
         font-size: 5rem;
         font-family: $fonte1;
 
         animation: show_ease $time_animation ease;
     }
 
-    .t_2{
+    .t_2 {
         display: block;
         font-size: 6rem;
     }
 
-    .t_3{
+    .t_3 {
         display: block;
         font-size: 4.7rem;
     }
 
-    .t_4{
+    .t_4 {
         font-size: 6rem;
     }
-    .button{
+    .button {
         background-color: $cor1;
         width: 500px;
         height: 75px;
@@ -52,7 +55,7 @@
         @include box-shadow;
 
         animation: show_ease $time_animation ease;
-        &::before{
+        &::before {
             content: "Realize seu sonho";
             border-radius: 5px;
             font-family: $fonte2;
@@ -69,11 +72,11 @@
 
             font-size: 2rem;
             transform: translate(10px, -10px);
-            transition: .5s ease all;
+            transition: 0.5s ease all;
         }
 
-        &:hover{
-            &::before{
+        &:hover {
+            &::before {
                 transform: translate(0px, 0px);
                 background-color: $cor1;
                 color: $cor2;
@@ -81,96 +84,85 @@
         }
     }
 
-
-
-    @media screen and (max-width: 1200px)
-    {
-        .t_2{
+    @media screen and (max-width: 1200px) {
+        .t_2 {
             display: block;
             font-size: 4rem;
         }
-    
-        .t_3{
+
+        .t_3 {
             display: block;
             font-size: 2.7rem;
         }
-    
-        .t_4{
+
+        .t_4 {
             font-size: 3rem;
         }
 
-        .button{
+        .button {
             width: 400px;
             height: 50px;
 
-            &::before{
+            &::before {
                 width: 400px;
                 font-size: 1.5rem;
                 height: 50px;
             }
         }
-
     }
 
-    @media screen and (max-width: 650px)
-    {
-        h1{
+    @media screen and (max-width: 650px) {
+        h1 {
             text-align: center;
         }
-        .t_2{
+        .t_2 {
             display: block;
             font-size: 2rem;
         }
-    
-        .t_3{
+
+        .t_3 {
             display: block;
             font-size: 1.5rem;
         }
-    
-        .t_4{
+
+        .t_4 {
             font-size: 1.5rem;
         }
 
-        .button{
+        .button {
             width: 80%;
             margin: auto;
             height: 50px;
 
-            &::before{
+            &::before {
                 width: 100%;
                 margin: auto;
                 font-size: 1.5rem;
                 height: 50px;
             }
         }
-
     }
 
-    @media screen and (max-width: 400px)
-    {
-        .t_2{
+    @media screen and (max-width: 400px) {
+        .t_2 {
             font-size: 3rem;
             text-align: center;
             padding: 0px 10px;
             margin: auto;
-            
         }
 
-        .t_3{
+        .t_3 {
             font-size: 1.2rem;
             margin-top: 20px;
         }
     }
 
-
-
-    .control
-    {
+    .control {
         display: flex;
         flex-direction: column;
     }
 
-    &::before{
+    &::before {
         content: "";
         width: 100%;
         height: 100%;
@@ -182,11 +174,10 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-image: url("https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         filter: brightness(50%) grayscale(20%);
         background-position-x: center;
         background-position-y: center;
         z-index: -1;
-
     }
 }

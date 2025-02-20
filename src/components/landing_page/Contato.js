@@ -228,8 +228,8 @@ const Contato = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(form)
-
-        const telefone = "5511946289761"; // Número do WhatsApp
+  
+        const telefone = "5511966836385"; // Número do WhatsApp
 
         const nome = form.nome ? encodeURIComponent(form.nome) : "Não informado";
         const evento = form.evento ? encodeURIComponent(form.evento) : "Não informado";
@@ -333,7 +333,7 @@ const Contato = () => {
                                     </textarea>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                                <button type="submit" class={`${styles.button} btn`}>Enviar Mensagem</button>
                             </form>
                         </div>
                 </div>

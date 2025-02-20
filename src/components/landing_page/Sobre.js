@@ -30,8 +30,8 @@ const Sobre = () => {
 
     return (
         <>
-            <article className={`${styles.background} row w-100 mx-auto`} id='sobre'>
-                <div className={`${styles.content} col-10 `} ref={elementRef}>
+            <article className={`${styles.background} row w-100 mx-auto`} >
+                <div className={`${styles.content} col-10 `} ref={elementRef} id='sobre'>
                     <div className="row w-100" >
                         <div className={`col col-md-6 col-12 ${styles.article}`}>
                             <h2>Sobre a LR Assesoria</h2>

@@ -10,7 +10,7 @@ const Hero = () => {
                         <span className={`${styles.t_4}`}> COM A LR ASSESORIA</span>
                     </h1>
 
-                    <a href="#formulario" className={`${styles.button}`}></a>
+                    <a href="#servicos" className={`${styles.button}`}></a>
                 </div>
             </main>
         </>
