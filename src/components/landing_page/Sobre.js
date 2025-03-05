@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styles from '../../assets/scss/pages/Sobre.module.css'
 import { useEffect } from 'react'
 import Escolha from './Escolha'
+import Contato from "./Contato"
 
 const Sobre = () => {
 
@@ -60,6 +61,8 @@ const Sobre = () => {
             </article>
 
             <Escolha/>
+
+            <Contato/>
         </>
     )
 }
