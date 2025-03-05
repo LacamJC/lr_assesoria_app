@@ -100,6 +100,18 @@
   animation: show_ease 2s ease;
 }
 
+.mobileVision {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .mobileVision {
+    display: block;
+  }
+  .desktopVision {
+    display: none;
+  }
+}
 .background {
   padding-top: 100px;
   padding-bottom: 100px;

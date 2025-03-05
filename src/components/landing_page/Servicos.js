@@ -79,8 +79,22 @@ const Servicos = () => {
 
     return (
         <>
+            <article className={`${styles.mobileVision}`}>
+                        <h2>Nossos serviços</h2>
+                        <ul>
+                            {servicos.map((servico) => (
+                                <Link key={servico.id} to={`/servico/${servico.id}`}>
+                                    <li >{servico.titulo}</li>
+                                </Link>
+                            ))}
+                        </ul>
+
+                    </article>
             <article className={`${styles.background} ${styles.desktopVision}`} id="servicos">
+
+                
                 <AnimatedComponent>
+            
                     <div className={`${styles.content}`}>
                         <h2 className={`${styles.subtitulo}`}>Serviços</h2>
 
@@ -128,21 +142,12 @@ const Servicos = () => {
 
 
                     </div>
+                 
 
                 </AnimatedComponent>
             </article>
-            <article className={`${styles.mobileVision}`}>
-                <h2>Nossos serviços</h2>
-                <ul>
-                    {servicos.map((servico) => (
-                        <Link key={servico.id} to={`/servico/${servico.id}`}>   
-                            <li >{servico.titulo}</li>
-                        </Link>
-                    ))}
-                </ul>
-                
-            </article>
-        
+
+
         </>
     )
 }
