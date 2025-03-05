@@ -15,7 +15,7 @@
 }
 
 .button_bege {
-  background-color: #FCCEB4;
+  background-color: #ffe2d1;
   color: #59372F;
   border: none;
   min-height: 50px;
@@ -127,6 +127,12 @@
 .cabecalho .logo_container .logo_imagem {
   height: 90%;
 }
+@media screen and (max-width: 620px) {
+  .cabecalho .logo_container {
+    height: 70%;
+    margin-top: 15px;
+  }
+}
 .cabecalho .large_nav {
   width: 100%;
 }
@@ -148,7 +154,7 @@
   text-decoration: none;
 }
 .cabecalho .large_nav .menu_list .menu_list__link .menu_list__item {
-  color: #FCCEB4;
+  color: #ffe2d1;
   padding: 5px 10px;
   font-family: "Instrument Serif", cursive;
   font-size: 1.5rem;
@@ -170,7 +176,7 @@
 }
 .cabecalho .large_nav .menu_list .menu_list__link .menu_list__item:hover::after {
   width: 100%;
-  background-color: #FCCEB4;
+  background-color: #ffe2d1;
 }
 .cabecalho .hiddenNav {
   display: none;
@@ -267,11 +273,11 @@
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-family: "Instrument Serif", cursive;
-    color: #FCCEB4;
+    color: #ffe2d1;
     transition: 0.5s ease all;
   }
   .cabecalho .hiddenNav .menu_list .menu_list__link .menu_list__item:hover {
     text-decoration: underline;
-    text-decoration-color: #FCCEB4;
+    text-decoration-color: #ffe2d1;
   }
 }/*# sourceMappingURL=Header.module.css.map */

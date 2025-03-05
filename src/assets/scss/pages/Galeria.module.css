@@ -15,7 +15,7 @@
 }
 
 .button_bege {
-  background-color: #FCCEB4;
+  background-color: #ffe2d1;
   color: #59372F;
   border: none;
   min-height: 50px;
@@ -116,7 +116,7 @@
 }
 .galeria .switch {
   background-color: #59372F;
-  color: #FCCEB4;
+  color: #ffe2d1;
   position: absolute;
   z-index: 100;
   top: 20px;
@@ -158,7 +158,7 @@
   }
 }
 .galeria .txt {
-  background-color: #FCCEB4;
+  background-color: #ffe2d1;
 }
 .galeria .txt label {
   color: #59372F;
@@ -257,12 +257,12 @@
   color: #FFF8F0;
 }
 .galeria .galeria__item .title .content .aspas {
-  color: #FCCEB4;
+  color: #ffe2d1;
   font-size: 2rem;
 }
 .galeria .galeria__item .title .content h4 {
   font-family: "Inter", cursive;
-  color: #FCCEB4;
+  color: #ffe2d1;
 }
 .galeria .galeria__item .title .content p {
   font-family: "Inter", cursive;

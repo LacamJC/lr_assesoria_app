@@ -32,6 +32,11 @@
             height: 90%;
         }
 
+        @media screen and (max-width: 620px){
+            height: 70%;
+            margin-top: 15px;
+        }
+
         
     }
 

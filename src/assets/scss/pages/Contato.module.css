@@ -15,7 +15,7 @@
 }
 
 .button_bege {
-  background-color: #FCCEB4;
+  background-color: #ffe2d1;
   color: #59372F;
   border: none;
   min-height: 50px;
@@ -121,7 +121,7 @@
   width: 100%;
   z-index: -1;
   height: 100%;
-  background-image: url("https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: url("../../backgrounds/sean-oulashin-KMn4VEeEPR8-unsplash.webp");
   background-size: cover;
   background-repeat: no-repeat;
   filter: brightness(80%) blur(5px);
@@ -167,7 +167,7 @@
   border-radius: 5px;
 }
 .background .content .side_form .form .button {
-  background-color: #FCCEB4;
+  background-color: #ffe2d1;
   color: #59372F;
   font-family: "Inter", cursive;
   font-size: 1.2rem;
@@ -175,7 +175,7 @@
 }
 .background .content .side_form .form .button:hover {
   background-color: #59372F;
-  color: #FCCEB4;
+  color: #ffe2d1;
 }
 @media screen and (max-width: 520px) {
   .background .content .side_form .form .button {

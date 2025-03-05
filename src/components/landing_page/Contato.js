@@ -281,17 +281,17 @@ const Contato = () => {
                         <div className={`col col-md-6 col-12 bg-succedss ${styles.side_form}`}>
                             <form className={`${styles.form}`} onSubmit={handleSubmit}>
                                 <div className="mb-3">
-                                    <label for="nome" class={`form-label ${styles.label_title}`}>1. Seu nome</label>
+                                    <label htmlFor="nome" className={`form-label ${styles.label_title}`}>1. Seu nome</label>
                                     <input type="text" id="nome" name="nome" className="form-control" onChange={handleChange} />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="tipo" class={`form-label ${styles.label_title}`}>2. Tipo de evento</label>
-                                    {eventos.map((evento) => (
-                                        <Radio evento={evento} funcao={radioSelect} name="eventos" />
+                                    <label htmlFor="tipo" className={`form-label ${styles.label_title}`}>2. Tipo de evento</label>
+                                    {eventos.map((evento, id) => (
+                                        <Radio evento={evento} key={id} funcao={radioSelect} name="eventos" />
                                     ))}
                                     <div className="form-check">
-                                        <input class="form-check-input" type="radio" id="outro" name="eventos" onChange={radioSelect} />
-                                        <label className="form-check-label" for="outro">
+                                        <input className="form-check-input" type="radio" id="outro" name="eventos" onChange={radioSelect} />
+                                        <label className="form-check-label" htmlFor="outro">
                                             Outro
                                         </label>
                                     </div>
@@ -320,7 +320,7 @@ const Contato = () => {
                                 </div>
 
                                 <div className="mb-3">
-                                    <label htmlFor="servico" class={`form-label ${styles.label_title}`}>
+                                    <label htmlFor="servico" className={`form-label ${styles.label_title}`}>
                                         5. Qual tipo de serviço você deseja
                                     </label>
                                     {servicos.map((servico) => (<Radio evento={servico} funcao={radioSelect} name="servico" />))}
@@ -333,7 +333,7 @@ const Contato = () => {
                                     </textarea>
                                 </div>
 
-                                <button type="submit" class={`${styles.button} btn`}>Enviar Mensagem</button>
+                                <button type="submit" className={`${styles.button} btn`}>Enviar Mensagem</button>
                             </form>
                         </div>
                 </div>
@@ -349,8 +349,8 @@ const Radio = ({ evento, funcao, name }) => {
     return (
         <>
             <div className="form-check">
-                <input class="form-check-input" type="radio" name={name} id={evento.id} onChange={funcao} />
-                <label className="form-check-label" for={evento.id}>
+                <input className="form-check-input" type="radio" name={name} id={evento.id} onChange={funcao} />
+                <label className="form-check-label" htmlFor={evento.id}>
                     {evento.name}
                 </label>
             </div>

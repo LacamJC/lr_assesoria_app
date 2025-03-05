@@ -1,4 +1,4 @@
-import ServicoCard from "../objects/ServicoCard"
+
 import styles from '../../assets/scss/pages/Servicos.module.css'
 
 import Carousel from 'react-bootstrap/Carousel';
@@ -104,7 +104,7 @@ const Servicos = () => {
                                                 <div className={`${styles.grid}`}>
                                                     <div className={`${styles.grid_1}`}>
                                                         {/* <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width={"100%"} height={"100%"}/> */}
-                                                        <img className={`${styles.image_grid} ${servico.id}`} id={servico.id} src={servico.img_1} />
+                                                        <img className={`${styles.image_grid} ${servico.id}`} id={servico.id} src={servico.img_1} alt="Subimagem" />
                                                     </div>
                                                     <div className={`${styles.grid_2}`}>
                                                         <img className={`${styles.image_grid} ${servico.id} ${styles.select}`} src={servico.img_1} onClick={select} alt="Imagem relacionada ao servico em questao" />

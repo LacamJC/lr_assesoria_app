@@ -1,7 +1,7 @@
 import styles from '../../assets/scss/layout/Header.module.css'
-import { Link } from 'react-router-dom'
+
 import { FaPlus } from "react-icons/fa"
-import logo from '../../assets/img/logos_logo_border_white.png'
+import logo from '../../assets/img/LOGO_1.png'
 const Header = () =>{
     const handleClick = () =>{
         document.getElementById('checkbox').checked = false;

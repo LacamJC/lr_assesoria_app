@@ -15,7 +15,7 @@
 }
 
 .button_bege {
-  background-color: #FCCEB4;
+  background-color: #ffe2d1;
   color: #59372F;
   border: none;
   min-height: 50px;
@@ -156,7 +156,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #FCCEB4;
+  background-color: #ffe2d1;
   color: #59372F;
   display: flex;
   justify-content: center;
@@ -170,7 +170,7 @@
 .hero .button:hover::before {
   transform: translate(0px, 0px);
   background-color: #59372F;
-  color: #FCCEB4;
+  color: #ffe2d1;
 }
 @media screen and (max-width: 1200px) {
   .hero .t_2 {
@@ -249,7 +249,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../../backgrounds/samantha-gades-RHAtRIT3-CE-unsplash.webp");
   filter: brightness(50%) grayscale(20%);
   background-position-x: center;
   background-position-y: center;
