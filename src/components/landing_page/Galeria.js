@@ -37,6 +37,7 @@ const Galeria = () => {
     }
     return (
         <>
+      
             <div className={`${styles.galeria}`} id="depoimentos">
                 <div className={`form-check form-switch ${styles.switch}`} id="switch">
                     <label className={`form-check-label ${styles.label}`} id="label_text" htmlFor="flexSwitchCheckDefault">Mostrar Depoimentos</label>
@@ -92,6 +93,9 @@ const Galeria = () => {
                         </div>
                     </span>
                 </div>
+                
+            </div>
+        
 {/*
                 <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_1}`}>
                     <img src="https://images.unsplash.com/photo-1606490208247-b65be3d94cd1?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
@@ -124,7 +128,6 @@ const Galeria = () => {
                     </span>
                 </div> */}
 
-            </div>
         </>
     )
 }

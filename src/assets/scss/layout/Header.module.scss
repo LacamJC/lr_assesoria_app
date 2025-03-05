@@ -14,7 +14,7 @@
     top: 0;
     width: 100%;
     z-index: 1000000;
-    animation: from_top $time_animation ease-out;
+    // animation: from_top $time_animation ease-out;
 
     @media screen and (max-width:768px){
         padding: 0px 50px;
@@ -112,7 +112,7 @@
     }
 
     @media screen and (max-width:768px) {
-        position: fixed;
+        position: sticky;
         top: 0;
         width: 100%;
         z-index: 10000;

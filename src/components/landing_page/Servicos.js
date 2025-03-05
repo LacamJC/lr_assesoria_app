@@ -5,6 +5,8 @@ import Carousel from 'react-bootstrap/Carousel';
 
 import AnimatedComponent from "../objects/AnimatedComponent";
 
+import { Link } from 'react-router-dom';
+
 const Servicos = () => {
 
 
@@ -77,8 +79,7 @@ const Servicos = () => {
 
     return (
         <>
-
-            <article className={`${styles.background}`} id="servicos">
+            <article className={`${styles.background} ${styles.desktopVision}`} id="servicos">
                 <AnimatedComponent>
                     <div className={`${styles.content}`}>
                         <h2 className={`${styles.subtitulo}`}>Serviços</h2>
@@ -130,6 +131,18 @@ const Servicos = () => {
 
                 </AnimatedComponent>
             </article>
+            <article className={`${styles.mobileVision}`}>
+                <h2>Nossos serviços</h2>
+                <ul>
+                    {servicos.map((servico) => (
+                        <Link key={servico.id} to={`/servico/${servico.id}`}>   
+                            <li >{servico.titulo}</li>
+                        </Link>
+                    ))}
+                </ul>
+                
+            </article>
+        
         </>
     )
 }

@@ -33,7 +33,7 @@
 
 .link {
   font-style: italic;
-  color: #59372F;
+  color: #292929;
   background-color: transparent;
   padding: 5px 15px;
   border-radius: 4px;
@@ -43,9 +43,8 @@
   transition: 0.5s ease all;
 }
 .link:hover {
-  background-color: #59372F;
-  color: #FFF8F0;
-  text-decoration: none;
+  color: #59372F;
+  text-decoration: underline;
 }
 
 .subtitulo {
@@ -102,7 +101,7 @@
 
 .background {
   padding-top: 100px;
-  min-height: 700px;
+  min-height: 100vh;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -122,7 +121,7 @@
 .background .content {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
   background-color: rgba(255, 248, 240, 0.8705882353);
-  margin: auto;
+  margin: 0 auto;
   padding: 60px 60px;
   margin-top: 150px;
   border-radius: 10px 10px 0px 0px;
@@ -130,6 +129,13 @@
 .background .content h2 {
   font-family: "Instrument Serif", cursive;
   font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 624px) {
+  .background .content h2 {
+    font-size: 2rem;
+  }
 }
 .background .content .foto_destaque {
   width: 350px;

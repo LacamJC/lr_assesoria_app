@@ -1,8 +1,12 @@
 import styles from '../../assets/scss/pages/Hero.module.css'
 
+import Sobre from './Sobre'
+import { Link } from 'react-router-dom'
+
 const Hero = () => {
     return (
         <>
+    
             <main className={`${styles.hero}`}>
                 <div className={`${styles.control}`}>
                     <h1 className={`${styles.t_1}`}>
@@ -10,9 +14,15 @@ const Hero = () => {
                         <span className={`${styles.t_4}`}> COM A LR ASSESORIA</span>
                     </h1>
 
-                    <a href="#servicos" className={`${styles.button}`}></a>
-                </div>
+                    <Link to="/servicos" className={`${styles.button}`}></Link>
+                </div>  
+                
+
             </main>
+
+            
+            <Sobre/>
+      
         </>
     )
 }

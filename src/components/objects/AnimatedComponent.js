@@ -2,31 +2,31 @@ import styles from '../../assets/scss/pages/Sobre.module.css'
 import { useEffect, useRef } from 'react'
 
 const AnimatedComponent = ({ children }) => {
-  const elementRef = useRef(null);
+  // const elementRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          elementRef.current.classList.add(`${styles.show}`);
-        } else {
-          elementRef.current.classList.remove('animated');
-        }
-      });
-    });
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         elementRef.current.classList.add(`${styles.show}`);
+  //       } else {
+  //         elementRef.current.classList.remove('animated');
+  //       }
+  //     });
+  //   });
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
+  //   if (elementRef.current) {
+  //     observer.observe(elementRef.current);
+  //   }
 
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (elementRef.current) {
+  //       observer.unobserve(elementRef.current);
+  //     }
+  //   };
+  // }, []); ref={elementRef}
 
-  return <div ref={elementRef}>{children}</div>;
+  return <div >{children}</div>;
 }
 
 export default AnimatedComponent

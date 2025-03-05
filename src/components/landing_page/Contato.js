@@ -1,6 +1,8 @@
 import styles from "../../assets/scss/pages/Contato.module.css"
 import { useState } from "react"
+
 import AnimatedComponent from "../objects/AnimatedComponent"
+
 const Contato = () => {
     const [show, setShow] = useState(false)
     const [form, setForm] = useState({
@@ -98,6 +100,8 @@ const Contato = () => {
         element.classList.add(`${styles.blur}`)
         setTimeout(() => element.classList.remove(`${styles.blur}`), 250)
     }
+
+
 
     const radioSelect = (e) => {
         document.getElementById("outro").checked ? setShow(true) : setShow(false)
@@ -228,7 +232,7 @@ const Contato = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(form)
-  
+
         const telefone = "5511966836385"; // Número do WhatsApp
 
         const nome = form.nome ? encodeURIComponent(form.nome) : "Não informado";
@@ -267,9 +271,9 @@ const Contato = () => {
     return (
         <>
             <div className={`${styles.background}`} id="formulario">
-            <AnimatedComponent animationType="show">
-                <div className={`${styles.content} row container mx-auto`}>
-                    
+                <AnimatedComponent animationType="show">
+                    <div className={`${styles.content} row container mx-auto`}>
+
                         <div className={`col col-md-6 col-12 bg-pridmary ${styles.side_card}`} id="side_card">
                             <h3 className="" id="card_titulo">Casamento</h3>
                             <p id="card_paragrafo">
@@ -277,7 +281,7 @@ const Contato = () => {
                             </p>
                             <img src="https://images.unsplash.com/photo-1649183424680-464747a8e43d?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="card_foto" width="100%" />
                         </div>
-                    
+
                         <div className={`col col-md-6 col-12 bg-succedss ${styles.side_form}`}>
                             <form className={`${styles.form}`} onSubmit={handleSubmit}>
                                 <div className="mb-3">
@@ -309,7 +313,7 @@ const Contato = () => {
                                     <label htmlFor="pessoas" className={`form-label ${styles.label_title}`}>
                                         3. Quantidade de pessoas no evento (Quantidade aproximida)
                                     </label>
-                                    <input type="number" className="form-control" name="qtd_pessoas" onChange={handleChange}  />
+                                    <input type="number" className="form-control" name="qtd_pessoas" onChange={handleChange} />
                                 </div>
 
                                 <div className="mb-3">
@@ -336,10 +340,11 @@ const Contato = () => {
                                 <button type="submit" className={`${styles.button} btn`}>Enviar Mensagem</button>
                             </form>
                         </div>
-                </div>
-                
+                    </div>
+
                 </AnimatedComponent>
             </div>
+
         </>
     )
 }

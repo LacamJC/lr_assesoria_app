@@ -97,33 +97,4 @@
 
 .show {
   animation: show_ease 2s ease;
-}
-
-.content {
-  background-color: #ffe2d1;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.content .subtitulo {
-  font-size: 3rem;
-  text-align: center;
-  font-family: "Instrument Serif", cursive;
-}
-.content .paragrafo {
-  text-align: center;
-  width: 50%;
-  font-family: "Inter", cursive;
-  margin: auto;
-  margin-bottom: 50px;
-}
-@media screen and (max-width: 769px) {
-  .content .paragrafo {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .content .paragrafo {
-    width: 100%;
-    padding: 0px 10px;
-  }
-}/*# sourceMappingURL=Eventos.module.css.map */
+}/*# sourceMappingURL=EventosDetalhe.module.css.map */

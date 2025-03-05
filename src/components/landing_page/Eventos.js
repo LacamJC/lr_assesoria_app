@@ -4,6 +4,8 @@ import icone_casamento from '../../assets/img/icones/casamento_black.png'
 import icone_panela from '../../assets/img/icones/panela_black.png'
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel"
+import { Link } from 'react-router-dom';
+
 
 import AnimatedComponent from '../objects/AnimatedComponent';
 const Eventos = () => {
@@ -64,7 +66,8 @@ const Eventos = () => {
 
     return (
         <>
-            <article className={`${styles.content}`} id='eventos'>
+   
+            <article className={`${styles.content} ${styles.desktopVision}`} id='eventos'>
 
                 <AnimatedComponent animationType="show">
                     <h2 className={`${styles.subtitulo}`}>Eventos</h2>
@@ -95,16 +98,20 @@ const Eventos = () => {
                         itemClass="carousel-item-padding-40-px"
                     >
                         {eventos.map((evento) => (
+                            <Link to={`/evento/${evento.id}`}>
                             <Card
                                 key={evento.id}
                                 title={evento.title}
                                 img={evento.img}
                             />
+                            </Link>
                         ))}
                     </Carousel>
 
                 </AnimatedComponent>
             </article>
+
+            
         </>
     )
 }

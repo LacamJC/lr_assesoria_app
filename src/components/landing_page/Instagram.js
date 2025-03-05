@@ -2,9 +2,11 @@ import styles from "../../assets/scss/pages/Instagram.module.css"
 import { FaInstagram, FaPhone, FaWhatsapp } from "react-icons/fa"
 import phone from "../../assets/img/phone.png"
 import AnimatedComponent from "../objects/AnimatedComponent"
+
 const Instagram = () => {
     return (
         <>
+      
             <div className={`${styles.background}`}>
                 <AnimatedComponent>
                     <div className={`${styles.content} container`} id="contato">
@@ -45,6 +47,7 @@ const Instagram = () => {
                     </div>
                 </AnimatedComponent>
             </div>
+       
         </>
     )
 

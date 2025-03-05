@@ -78,7 +78,7 @@ $fonte2 : "Inter", cursive;
 
 .link{
     font-style: italic;
-    color: $cor1;
+    color: $cor4;
     background-color: transparent;
     padding: 5px 15px;
     border-radius: 4px;
@@ -87,9 +87,9 @@ $fonte2 : "Inter", cursive;
     font-weight: bold;
     transition: .5s ease all;
     &:hover{
-        background-color: $cor1;
-        color: $cor3;
-        text-decoration: none;
+        // background-color: $cor1;
+        color: $cor1;
+        text-decoration: underline;
 
     }
 }

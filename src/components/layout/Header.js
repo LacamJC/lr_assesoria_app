@@ -22,21 +22,21 @@ const Header = () =>{
                 <nav className={`${styles.large_nav}`}>
                     <ul className={`${styles.menu_list}`}>
 
-                        <a href="#" className={`${styles.menu_list__link}`}>
+                        <a href="/" className={`${styles.menu_list__link}`}>
                             <li className={`${styles.menu_list__item}`}>Home</li>
                         </a>
 
                         
 
-                        <a href="#eventos" className={`${styles.menu_list__link}`}>
+                        <a href="/evento" className={`${styles.menu_list__link}`}>
                             <li className={`${styles.menu_list__item}`}>Eventos</li>
                         </a>
 
-                        <a href="#servicos" className={`${styles.menu_list__link}`}>
+                        <a href="/servicos" className={`${styles.menu_list__link}`}>
                             <li className={`${styles.menu_list__item}`}>Serviços</li>
                         </a>
 
-                        <a href="#" className={`${styles.menu_list__link}`}>
+                        <a href="/contato" className={`${styles.menu_list__link}`}>
                             <li className={`${styles.menu_list__item}`}>Contato</li>
                         </a>
 
@@ -48,23 +48,20 @@ const Header = () =>{
                     <input type="checkbox" id='checkbox' className={`${styles.checkbox}`}/>
                     <FaPlus className={`${styles.menu_icon}`}/>
                     <ul className={`${styles.menu_list}`}>
-                        <a href="#" className={`${styles.menu_list__link}`} onClick={handleClick}>
+                        <a href="/" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Home</li>
                         </a>
                         
-                        <a href="#sobre" className={`${styles.menu_list__link}`} onClick={handleClick}>
-                            <li className={`${styles.menu_list__item}`}>Sobre</li>
-                        </a>
 
-                        <a href="#eventos" className={`${styles.menu_list__link}`} onClick={handleClick}>
+                        <a href="/eventos" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Eventos</li>
                         </a>
 
-                        <a href="#servicos" className={`${styles.menu_list__link}`} onClick={handleClick}>
+                        <a href="/servicos" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Serviços</li>
                         </a>
 
-                        <a href="#" className={`${styles.menu_list__link}`} onClick={handleClick}>
+                        <a href="/contato" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Contato</li>
                         </a>
 
