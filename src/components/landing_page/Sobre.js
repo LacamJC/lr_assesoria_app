@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom'
 import styles from '../../assets/scss/pages/Sobre.module.css'
 import { useEffect } from 'react'
+import Escolha from './Escolha'
 
 const Sobre = () => {
 
@@ -51,8 +52,14 @@ const Sobre = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
+
+                
+                
             </article>
+
+            <Escolha/>
         </>
     )
 }

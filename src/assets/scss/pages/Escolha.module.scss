@@ -1,0 +1,71 @@
+@import "../variables";
+
+.content {
+    // margin-top: 150px;
+    padding-top: 75px;
+    margin-bottom: 300px;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        background-image: url("https://images.pexels.com/photos/1210276/pexels-photo-1210276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(1px);
+        opacity: 0.14;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: red;
+        z-index: -1 ;
+    }
+    
+    h2 {
+        font-size: 3rem;
+        font-family: $fonte1;
+        color: $cor1;
+        text-align: center;
+        margin-bottom: 150px;
+    }
+
+    .card {
+        @include box-shadow;
+        padding: 10px 15px;
+        background-color: white;
+        border-radius: 12px;
+        img{
+            // background-color: blue;
+            width: 50%;
+            margin: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+        h5{
+            height: 50px;
+            // background-color: blue;
+        }
+        p{
+            height: 200px;
+            // background-color: red;
+        }
+        a {
+            text-align: center;
+            display: block;
+            color: $cor2;
+            font-size: 1.2rem;
+            font-family: $fonte2;
+            text-decoration: none;
+            background-color: $cor1;
+            padding: 10px 15px;
+            border-radius: 12px;
+            @include box-shadow;
+            transition: 0.5s ease all;
+            &:hover {
+                color: $cor1;
+                background-color: $cor2;
+            }
+        }
+    }
+}
