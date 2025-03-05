@@ -13,6 +13,7 @@ const Footer = () => {
                                     Hero
                                 </a>
                             </li>
+
                             <li className="nav-item mb-2">
                                 <a href="/#sobre" className="nav-link p-0 text-body-secondary">
                                     Sobre nós

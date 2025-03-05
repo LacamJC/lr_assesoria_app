@@ -105,7 +105,7 @@ const Eventos = () => {
                     itemClass="carousel-item-padding-40-px"
                 >
                     {eventos.map((evento) => (
-                        <Link to={`/agendar`}>
+                        <Link to={`/agendar`} className={`${styles.wtd}`}>
                             <Card
                                 key={evento.id}
                                 title={evento.title}

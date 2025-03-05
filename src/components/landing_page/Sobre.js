@@ -32,12 +32,12 @@ const Sobre = () => {
                                     </Link>
                                 </li>
                                 <li className={`${styles.list_link}`}>
-                                    <Link className={`${styles.link}`} to="/servico">
+                                    <Link className={`${styles.link}`} to="/servicos">
                                         Serviços
                                     </Link>
                                 </li>
                                 <li className={`${styles.list_link}`}>
-                                    <Link className={`${styles.link}`}  >
+                                    <Link className={`${styles.link}`} to="/contato" >
                                         Contato
                                     </Link>
                                 </li>

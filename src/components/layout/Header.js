@@ -1,20 +1,26 @@
 import styles from '../../assets/scss/layout/Header.module.css'
-
+import { Link } from 'react-router-dom'
 import { FaPlus } from "react-icons/fa"
 import logo from '../../assets/img/LOGO_1.png'
-const Header = () =>{
-    const handleClick = () =>{
+const Header = () => {
+    const handleClick = () => {
         document.getElementById('checkbox').checked = false;
     }
-    return(
+
+    const backtoHome = () => {
+
+        window.location.href = "/"
+    }
+    return (
         <>
             <header className={`${styles.cabecalho}`}>
                 <div className={`${styles.logo_container}`}>
-                    <img 
+                    <img
                         src={logo}
                         alt="Logo da LR Assesoria"
-                        
+
                         className={`${styles.logo_imagem}`}
+                        onClick={backtoHome}
                     />
                 </div>
 
@@ -22,50 +28,51 @@ const Header = () =>{
                 <nav className={`${styles.large_nav}`}>
                     <ul className={`${styles.menu_list}`}>
 
-                        <a href="/" className={`${styles.menu_list__link}`}>
+                    
+
+                        <Link to="/" className={`${styles.menu_list__link}`}>
                             <li className={`${styles.menu_list__item}`}>Home</li>
-                        </a>
+                        </Link>
 
-                        
-
-                        <a href="/evento" className={`${styles.menu_list__link}`}>
+                        <Link to="/evento" className={`${styles.menu_list__link}`}>
                             <li className={`${styles.menu_list__item}`}>Eventos</li>
-                        </a>
+                        </Link>
 
-                        <a href="/servicos" className={`${styles.menu_list__link}`}>
+                        <Link to="/servicos" className={`${styles.menu_list__link}`}>
                             <li className={`${styles.menu_list__item}`}>Serviços</li>
-                        </a>
+                        </Link>
 
-                        <a href="/contato" className={`${styles.menu_list__link}`}>
+                        <Link to="/contato" className={`${styles.menu_list__link}`}>
                             <li className={`${styles.menu_list__item}`}>Contato</li>
-                        </a>
+                        </Link>
+
 
                     </ul>
                 </nav>
 
                 {/* Menu para telas menores */}
                 <div className={`${styles.hiddenNav}`}>
-                    <input type="checkbox" id='checkbox' className={`${styles.checkbox}`}/>
-                    <FaPlus className={`${styles.menu_icon}`}/>
+                    <input type="checkbox" id='checkbox' className={`${styles.checkbox}`} />
+                    <FaPlus className={`${styles.menu_icon}`} />
                     <ul className={`${styles.menu_list}`}>
-                        <a href="/" className={`${styles.menu_list__link}`} onClick={handleClick}>
+
+                        <Link to="/" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Home</li>
-                        </a>
-                        
+                        </Link>
 
-                        <a href="/eventos" className={`${styles.menu_list__link}`} onClick={handleClick}>
+                        <Link to="/evento" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Eventos</li>
-                        </a>
+                        </Link>
 
-                        <a href="/servicos" className={`${styles.menu_list__link}`} onClick={handleClick}>
+                        <Link to="/servicos" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Serviços</li>
-                        </a>
+                        </Link>
 
-                        <a href="/contato" className={`${styles.menu_list__link}`} onClick={handleClick}>
+                        <Link to="/contato" className={`${styles.menu_list__link}`} onClick={handleClick}>
                             <li className={`${styles.menu_list__item}`}>Contato</li>
-                        </a>
+                        </Link>
 
-                        </ul>
+                    </ul>
                 </div>
             </header>
         </>

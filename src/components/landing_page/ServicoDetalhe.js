@@ -68,6 +68,10 @@ const ServicoDetalhe = () => {
     const { id } = useParams()
     const servico = servicos.find((s) => s.id === parseInt(id))
 
+    const scrollToTop = () => {
+        window.scrollTo({top:0})
+    }
+
     return (
         <>
 
@@ -100,6 +104,15 @@ const ServicoDetalhe = () => {
                     </div>
 
                     <Link to={`/agendar`} className={`${styles.btn} btn`}>Faça acontecer</Link>
+
+                    <h3>Veja também</h3>
+                    <ul>
+                    {servicos.map((servico) => (
+                        <Link key={servico.id} className={`${styles.list_link}`} to={`/servico/${servico.id}`} onClick={scrollToTop}>
+                            <li >{servico.titulo}</li>
+                        </Link>
+                    ))}
+                    </ul>
                 </div>
             </article>
         </>

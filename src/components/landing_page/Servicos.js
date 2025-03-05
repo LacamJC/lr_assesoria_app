@@ -3,15 +3,15 @@ import styles from '../../assets/scss/pages/Servicos.module.css'
 
 import Carousel from 'react-bootstrap/Carousel';
 
-import { useEffect  } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Servicos = () => {
 
 
- useEffect(()=>{
-        window.scrollTo({top: 0})
-    },[])
+    useEffect(() => {
+        window.scrollTo({ top: 0 })
+    }, [])
 
 
 
@@ -81,68 +81,68 @@ const Servicos = () => {
     return (
         <>
             <article className={`${styles.mobileVision}`}>
-                        <h2>Veja como funciona nossos serviços e como podemos te ajudar !</h2>
-                        <ul className={`${styles.list_servicos}`}>
-                            {servicos.map((servico) => (
-                                <Link key={servico.id} className={`${styles.list_link}`} to={`/servico/${servico.id}`}>
-                                    <li >{servico.titulo}</li>
-                                </Link>
-                            ))}
-                        </ul>
+                <h2>Veja como funciona nossos serviços e como podemos te ajudar !</h2>
+                <ul className={`${styles.list_servicos}`}>
+                    {servicos.map((servico) => (
+                        <Link key={servico.id} className={`${styles.list_link}`} to={`/servico/${servico.id}`}>
+                            <li >{servico.titulo}</li>
+                        </Link>
+                    ))}
+                </ul>
 
-                    </article>
+            </article>
             <article className={`${styles.background} ${styles.desktopVision}`} id="servicos">
 
-                
-            
-                    <div className={`${styles.content}`}>
-                        <h2 className={`${styles.subtitulo}`}>Serviços</h2>
 
-                        <Carousel interval={100000000} >
 
-                            {servicos.map((servico) => (
-                                <Carousel.Item className={`${styles.carousel_item}`} key={servico.id}>
-                                    <div className={`${styles.carousel_content}`}>
-                                        <div className="row">
-                                            <div className="col col-xl-6 col-12 d-flex flex-column">
-                                                <h3>{servico.titulo}</h3>
-                                                <p>{servico.paragrafo}</p>
-                                                <ul>
-                                                    {servico.items.map((item) => (
-                                                        <li key={item} className={`${styles.servico_list_item}`}>{item}</li>
-                                                    ))}
-                                                </ul>
+                <div className={`${styles.content}`}>
+                    <h2 className={`${styles.subtitulo}`}>Serviços</h2>
 
-                                                <a href="/agendar" className={`${styles.button} btn`}></a>
-                                            </div>
-                                            <div className={`col col-xl-6 col-12 d-flex justify-content-center align-items-center`}>
-                                                <div className={`${styles.grid}`}>
-                                                    <div className={`${styles.grid_1}`}>
-                                                        {/* <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width={"100%"} height={"100%"}/> */}
-                                                        <img className={`${styles.image_grid} ${servico.id}`} id={servico.id} src={servico.img_1} alt="Subimagem" />
-                                                    </div>
-                                                    <div className={`${styles.grid_2}`}>
-                                                        <img className={`${styles.image_grid} ${servico.id} ${styles.select}`} src={servico.img_1} onClick={select} alt="Imagem relacionada ao servico em questao" />
-                                                    </div>
-                                                    <div className={`${styles.grid_3}`}>
-                                                        <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_2} onClick={select} alt="Imagem relacionada ao servico em questao" />
-                                                    </div>
-                                                    <div className={`${styles.grid_4}`}>
-                                                        <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_3} onClick={select} alt="Imagem relacionada ao servico em questao" />
-                                                    </div>
+                    <Carousel interval={100000000} >
+
+                        {servicos.map((servico) => (
+                            <Carousel.Item className={`${styles.carousel_item}`} key={servico.id}>
+                                <div className={`${styles.carousel_content}`}>
+                                    <div className="row">
+                                        <div className="col col-xl-6 col-12 d-flex flex-column">
+                                            <h3>{servico.titulo}</h3>
+                                            <p>{servico.paragrafo}</p>
+                                            <ul>
+                                                {servico.items.map((item) => (
+                                                    <li key={item} className={`${styles.servico_list_item}`}>{item}</li>
+                                                ))}
+                                            </ul>
+
+                                            <a href="/agendar" className={`${styles.button} btn`}></a>
+                                        </div>
+                                        <div className={`col col-xl-6 col-12 d-flex justify-content-center align-items-center`}>
+                                            <div className={`${styles.grid}`}>
+                                                <div className={`${styles.grid_1}`}>
+                                                    {/* <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width={"100%"} height={"100%"}/> */}
+                                                    <img className={`${styles.image_grid} ${servico.id}`} id={servico.id} src={servico.img_1} alt="Subimagem" />
+                                                </div>
+                                                <div className={`${styles.grid_2}`}>
+                                                    <img className={`${styles.image_grid} ${servico.id} ${styles.select}`} src={servico.img_1} onClick={select} alt="Imagem relacionada ao servico em questao" />
+                                                </div>
+                                                <div className={`${styles.grid_3}`}>
+                                                    <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_2} onClick={select} alt="Imagem relacionada ao servico em questao" />
+                                                </div>
+                                                <div className={`${styles.grid_4}`}>
+                                                    <img className={`${styles.image_grid} ${servico.id}`} src={servico.img_3} onClick={select} alt="Imagem relacionada ao servico em questao" />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </Carousel.Item>
+                                </div>
+                            </Carousel.Item>
 
 
-                            ))}
-                        </Carousel>
+                        ))}
+                    </Carousel>
 
 
-                    </div>
-                 
+                </div>
+
 
             </article>
 
