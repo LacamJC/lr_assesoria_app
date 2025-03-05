@@ -1,15 +1,16 @@
 import styles from '../../assets/scss/layout/Header.module.css'
 import { Link } from 'react-router-dom'
 import { FaPlus } from "react-icons/fa"
+import { useNavigate } from 'react-router-dom'
 import logo from '../../assets/img/LOGO_1.png'
 const Header = () => {
     const handleClick = () => {
         document.getElementById('checkbox').checked = false;
     }
 
+    const navigate = useNavigate()
     const backtoHome = () => {
-
-        window.location.href = "/"
+        navigate("/")
     }
     return (
         <>
