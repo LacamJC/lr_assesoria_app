@@ -1,7 +1,6 @@
 import styles from "../../assets/scss/pages/Contato.module.css"
 import { useState } from "react"
 
-import AnimatedComponent from "../objects/AnimatedComponent"
 
 const Contato = () => {
     const [show, setShow] = useState(false)
@@ -271,13 +270,13 @@ const Contato = () => {
     return (
         <>
             <div className={`${styles.background}`} id="formulario">
-                <AnimatedComponent animationType="show">
+            
                     <div className={`${styles.content} row container mx-auto`}>
 
                         <div className={`col col-md-6 col-12 bg-pridmary ${styles.side_card}`} id="side_card">
-                            <h3 className="" id="card_titulo">Casamento</h3>
+                            <h3 className="" id="card_titulo">Preencha este formulário</h3>
                             <p id="card_paragrafo">
-                                O casamento é um dos momentos mais marcantes na vida de um casal. É a celebração do amor, da união e do início de uma nova jornada juntos. Cada detalhe conta, desde a escolha do local até a última música da festa, e tudo deve refletir a personalidade e os sonhos dos noivos.
+                                Ao preencher este formulário e enviar, você sera redirecionada para entrar em contato com nossa equipe de maneira fácil e rápida.
                             </p>
                             <img src="https://images.unsplash.com/photo-1649183424680-464747a8e43d?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="card_foto" width="100%" />
                         </div>
@@ -342,7 +341,6 @@ const Contato = () => {
                         </div>
                     </div>
 
-                </AnimatedComponent>
             </div>
 
         </>

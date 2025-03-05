@@ -2,39 +2,39 @@ import { FaInstagram, FaWhatsapp, FaFacebook, FaLinkedin, FaGithub } from "react
 import styles from "../../assets/scss/layout/Footer.module.css"
 const Footer = () => {
     return (
-        <div className="container">
-            <footer className="py-5">
+        <div className={`${styles.bg} `}>
+            <footer className="py-5 container">
                 <div className="row">
                     <div className="col-6 col-md-6 mb-3">
                         <h5>Áreas</h5>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2">
-                                <a href="#" className="nav-link p-0 text-body-secondary">
+                                <a href="/" className="nav-link p-0 text-body-secondary">
                                     Hero
                                 </a>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="#sobre" className="nav-link p-0 text-body-secondary">
+                                <a href="/#sobre" className="nav-link p-0 text-body-secondary">
                                     Sobre nós
                                 </a>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="#eventos" className="nav-link p-0 text-body-secondary">
+                                <a href="/evento" className="nav-link p-0 text-body-secondary">
                                     Eventos
                                 </a>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="#servicos" className="nav-link p-0 text-body-secondary">
+                                <a href="/servicos" className="nav-link p-0 text-body-secondary">
                                     Serviços
                                 </a>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="#depoimentos" className="nav-link p-0 text-body-secondary">
+                                <a href="/evento" className="nav-link p-0 text-body-secondary">
                                     Depoimentos
                                 </a>
                             </li>
                             <li className="nav-item mb-2">
-                                <a href="#formulario" className="nav-link p-0 text-body-secondary">
+                                <a href="/agendar" className="nav-link p-0 text-body-secondary">
                                     Formúlario para evento
                                 </a>
                             </li>

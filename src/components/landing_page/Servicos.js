@@ -3,14 +3,15 @@ import styles from '../../assets/scss/pages/Servicos.module.css'
 
 import Carousel from 'react-bootstrap/Carousel';
 
-import AnimatedComponent from "../objects/AnimatedComponent";
-
+import { useEffect  } from 'react';
 import { Link } from 'react-router-dom';
 
 const Servicos = () => {
 
 
-
+ useEffect(()=>{
+        window.scrollTo({top: 0})
+    },[])
 
 
 
@@ -80,10 +81,10 @@ const Servicos = () => {
     return (
         <>
             <article className={`${styles.mobileVision}`}>
-                        <h2>Nossos serviços</h2>
-                        <ul>
+                        <h2>Veja como funciona nossos serviços e como podemos te ajudar !</h2>
+                        <ul className={`${styles.list_servicos}`}>
                             {servicos.map((servico) => (
-                                <Link key={servico.id} to={`/servico/${servico.id}`}>
+                                <Link key={servico.id} className={`${styles.list_link}`} to={`/servico/${servico.id}`}>
                                     <li >{servico.titulo}</li>
                                 </Link>
                             ))}
@@ -93,7 +94,6 @@ const Servicos = () => {
             <article className={`${styles.background} ${styles.desktopVision}`} id="servicos">
 
                 
-                <AnimatedComponent>
             
                     <div className={`${styles.content}`}>
                         <h2 className={`${styles.subtitulo}`}>Serviços</h2>
@@ -113,7 +113,7 @@ const Servicos = () => {
                                                     ))}
                                                 </ul>
 
-                                                <a href="#formulario" className={`${styles.button} btn`}></a>
+                                                <a href="/agendar" className={`${styles.button} btn`}></a>
                                             </div>
                                             <div className={`col col-xl-6 col-12 d-flex justify-content-center align-items-center`}>
                                                 <div className={`${styles.grid}`}>
@@ -144,7 +144,6 @@ const Servicos = () => {
                     </div>
                  
 
-                </AnimatedComponent>
             </article>
 
 

@@ -76,11 +76,23 @@ $fonte2 : "Inter", cursive;
     }
 }
 
+
+.list__link{
+    list-style-position: inside;
+
+    .list_link{
+        margin: 10px 0px;
+        
+    }
+
+}
+
+
 .link{
     font-style: italic;
     color: $cor4;
     background-color: transparent;
-    padding: 5px 15px;
+    padding: 5px;
     border-radius: 4px;
     text-decoration: underline;
     letter-spacing: 1px;

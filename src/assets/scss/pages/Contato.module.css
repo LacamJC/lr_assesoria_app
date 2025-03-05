@@ -31,11 +31,18 @@
   color: #FFF8F0;
 }
 
+.list__link {
+  list-style-position: inside;
+}
+.list__link .list_link {
+  margin: 10px 0px;
+}
+
 .link {
   font-style: italic;
   color: #292929;
   background-color: transparent;
-  padding: 5px 15px;
+  padding: 5px;
   border-radius: 4px;
   text-decoration: underline;
   letter-spacing: 1px;
@@ -147,6 +154,7 @@
   font-size: 1.2rem;
 }
 .background .content .side_form .form {
+  height: 950px;
   box-shadow: 0px 0px 3px rgba(255, 248, 240, 0.6980392157);
   background-color: rgba(255, 248, 240, 0.6980392157);
   padding: 15px 20px;
@@ -185,7 +193,7 @@
 .background .content .side_card {
   position: relative;
   color: white;
-  height: 700px;
+  height: 950px;
   overflow: hidden;
   border-radius: 16px;
   padding: 60px 20px;
@@ -194,7 +202,7 @@
 }
 @media screen and (min-width: 600px) {
   .background .content .side_card {
-    height: 900px;
+    height: 950px;
   }
 }
 .background .content .side_card h3 {

@@ -20,13 +20,18 @@ function App() {
           <Routes>
 
             <Route path="/" element={<Hero />} />
-            <Route path="/evento/:id" element={<EventoDetalhe />} />
+
             <Route path="/contato" element={<Instagram />} />
+
             <Route path="/agendar" element={<Contato />} />
+
+            
             
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/servico/:id" element={<ServicoDetalhe />} />
+
             <Route path="/evento" element={<Eventos />} />
+            <Route path="/evento/:id" element={<EventoDetalhe />} />
 
           </Routes>
         </Layout>

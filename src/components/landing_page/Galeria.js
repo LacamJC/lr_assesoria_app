@@ -37,13 +37,13 @@ const Galeria = () => {
     }
     return (
         <>
-      
-            <div className={`${styles.galeria}`} id="depoimentos">
+
+            <div className={`${styles.galeria} mb-5 pb-5`} id="depoimentos">
                 <div className={`form-check form-switch ${styles.switch}`} id="switch">
                     <label className={`form-check-label ${styles.label}`} id="label_text" htmlFor="flexSwitchCheckDefault">Mostrar Depoimentos</label>
                     <input className={`${styles.hidden} form-check-input`} type="checkbox" role="switch" id="flexSwitchCheckDefault" onChange={showDepoimentos} />
                 </div>
-                <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_2}`}>
+                <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_1}`}>
                     <img src={foto1} />
                     <span className={`${styles.title}`}>
                         <div className={`${styles.content}`}>
@@ -57,7 +57,7 @@ const Galeria = () => {
                     </span>
                 </div>
 
-                 <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_2}`}>
+                <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_1}`}>
                     <img src={foto3} />
                     <span className={`${styles.title}`}>
                         <div className={`${styles.content}`}>
@@ -76,7 +76,7 @@ const Galeria = () => {
                     </span>
                 </div>
 
-                <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_4}`}>
+                <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_1}`}>
                     <img src={foto2} />
                     <span className={`${styles.title}`}>
                         <div className={`${styles.content}`}>
@@ -93,10 +93,10 @@ const Galeria = () => {
                         </div>
                     </span>
                 </div>
-                
+
             </div>
-        
-{/*
+
+            {/*
                 <div className={`${styles.galeria__item} ${styles.h_1} ${styles.w_1}`}>
                     <img src="https://images.unsplash.com/photo-1606490208247-b65be3d94cd1?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                     <span className={`${styles.title}`}>

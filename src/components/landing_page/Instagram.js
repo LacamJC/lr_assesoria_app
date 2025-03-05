@@ -1,14 +1,17 @@
 import styles from "../../assets/scss/pages/Instagram.module.css"
 import { FaInstagram, FaPhone, FaWhatsapp } from "react-icons/fa"
 import phone from "../../assets/img/phone.png"
-import AnimatedComponent from "../objects/AnimatedComponent"
+import { useEffect } from "react"
 
 const Instagram = () => {
+     useEffect(()=>{
+            window.scrollTo({top: 0})
+        },[])
     return (
         <>
       
             <div className={`${styles.background}`}>
-                <AnimatedComponent>
+             
                     <div className={`${styles.content} container`} id="contato">
                         <h2>Entre em contato conosco</h2>
 
@@ -23,12 +26,12 @@ const Instagram = () => {
                                 <ul>
                                     <li>
                                         <a href="https://wa.me/5511966836385?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%20%21%20Gostaria%20de%20conversar%20sobre%20um%20evento%20que%20quero%20fazer" target="_blank">
-                                            <FaWhatsapp className={`${styles.icon}`} /> (11) 12345-5948
+                                            <FaWhatsapp className={`${styles.icon}`} /> +55 11 96683-6385
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/lr.assessoria.eventos/" target="_blank">
-                                            <FaPhone className={`${styles.icon}`} /> (11) 12345-5948
+                                            <FaPhone className={`${styles.icon}`} /> +55 11 96683-6385
                                         </a>
                                     </li>
                                 </ul>
@@ -45,7 +48,7 @@ const Instagram = () => {
                             </div>
                         </div>
                     </div>
-                </AnimatedComponent>
+             
             </div>
        
         </>

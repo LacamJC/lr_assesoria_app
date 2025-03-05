@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Hero = () => {
     return (
         <>
-    
+
             <main className={`${styles.hero}`}>
                 <div className={`${styles.control}`}>
                     <h1 className={`${styles.t_1}`}>
@@ -15,14 +15,14 @@ const Hero = () => {
                     </h1>
 
                     <Link to="/servicos" className={`${styles.button}`}></Link>
-                </div>  
-                
+                </div>
+
 
             </main>
 
-            
-            <Sobre/>
-      
+
+            <Sobre />
+
         </>
     )
 }

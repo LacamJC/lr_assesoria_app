@@ -1,14 +1,17 @@
 import styles from '../../assets/scss/pages/Eventos.module.css'
 import Card from '../objects/Card';
+import { useEffect } from 'react';
 import icone_casamento from '../../assets/img/icones/casamento_black.png'
 import icone_panela from '../../assets/img/icones/panela_black.png'
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel"
 import { Link } from 'react-router-dom';
+import Galeria from './Galeria';
 
-
-import AnimatedComponent from '../objects/AnimatedComponent';
 const Eventos = () => {
+    useEffect(()=>{
+        window.scrollTo({top: 0})
+    },[])
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -64,54 +67,60 @@ const Eventos = () => {
         }
     ]
 
+
+    useEffect(() => {
+        window.scrollTo({ top: 0 })
+    }, [])
+
     return (
         <>
-   
+
             <article className={`${styles.content} ${styles.desktopVision}`} id='eventos'>
 
-                <AnimatedComponent animationType="show">
-                    <h2 className={`${styles.subtitulo}`}>Eventos</h2>
-                    <p className={`${styles.paragrafo}`}>Vamos além de um simples serviço de assesoria, cuidados de tudo que você precisa para ter o evento dos seus sonhos</p>
+                <h2 className={`${styles.subtitulo}`}>Eventos</h2>
+                <p className={`${styles.paragrafo}`}>Vamos além de um simples serviço de assesoria, cuidados de tudo que você precisa para ter o evento dos seus sonhos</p>
 
-                    {/* {eventos.map((evento)=>(
+                {/* {eventos.map((evento)=>(
                     <Card 
                         title={evento.title}
                         img={evento.img}
                     />
                 ))} */}
 
-                    <Carousel
-                        swipeable={true}
-                        draggable={true}
-                        showDots={false}
-                        responsive={responsive}
-                        ssr={true} // means to render carousel on server-side.
-                        infinite={true}
-                        autoPlay={true}
-                        autoPlaySpeed={3000}
-                        // keyBoardControl={true}
-                        // customTransition="all .5"
-                        // transitionDuration={500}
-                        containerClass="carousel-container"
-                        // removeArrowOnDeviceType={["tablet", "mobile"]}
-                        dotListClass="custom-dot-list-style"
-                        itemClass="carousel-item-padding-40-px"
-                    >
-                        {eventos.map((evento) => (
-                            <Link to={`/evento/${evento.id}`}>
+                <Carousel
+                    swipeable={true}
+                    draggable={true}
+                    showDots={false}
+                    responsive={responsive}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={3000}
+                    // keyBoardControl={true}
+                    // customTransition="all .5"
+                    // transitionDuration={500}
+                    containerClass="carousel-container"
+                    // removeArrowOnDeviceType={["tablet", "mobile"]}
+                    dotListClass="custom-dot-list-style"
+                    itemClass="carousel-item-padding-40-px"
+                >
+                    {eventos.map((evento) => (
+                        <Link to={`/agendar`}>
                             <Card
                                 key={evento.id}
                                 title={evento.title}
                                 img={evento.img}
                             />
-                            </Link>
-                        ))}
-                    </Carousel>
+                        </Link>
+                    ))}
+                </Carousel>
 
-                </AnimatedComponent>
+                <h2 className={`${styles.subtitulo} mt-5 pt-5`}>Depoimentos</h2>
             </article>
 
-            
+            <Galeria />
+
+
         </>
     )
 }
