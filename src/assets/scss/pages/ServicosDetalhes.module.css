@@ -111,6 +111,12 @@
   font-family: "Instrument Serif", cursive;
   letter-spacing: 2.5;
 }
+.content h3 {
+  font-family: "Inter", cursive;
+}
+.content .list_link {
+  color: #59372F;
+}
 .content p {
   font-size: 1rem;
   font-family: "Inter", cursive;
@@ -122,6 +128,20 @@
   display: block;
   margin: 20px auto;
   text-align: center;
+}
+.content ul {
+  list-style-image: url("../../img/list_icons.webp");
+  list-style-position: inside;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 80px;
+}
+.content ul li {
+  margin: 15px 0px;
+  text-align: justify;
+  line-height: 2rem;
+  font-size: 1.2;
+  font-family: "Inter", cursive;
 }
 
 .grid {

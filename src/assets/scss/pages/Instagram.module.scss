@@ -26,6 +26,11 @@
         background-color: transparent;
         @include box-shadow;
         border-radius: 16px;
+
+        @media screen and (max-width: 625px)
+        {
+            border-radius: 0;
+        }
         padding: 25px 0px;
 
         @media screen and (max-width: 768px)

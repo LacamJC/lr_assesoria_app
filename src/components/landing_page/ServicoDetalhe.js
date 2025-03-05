@@ -86,6 +86,14 @@ const ServicoDetalhe = () => {
                         {servico.paragrafo}
                     </p>
 
+                    <ul>
+                    <ul>
+                                                {servico.items.map((item) => (
+                                                    <li key={item} className={`${styles.servico_list_item}`}>{item}</li>
+                                                ))}
+                                            </ul>
+                    </ul>
+
                     <div className={`col col-xl-6 col-12 d-flex justify-content-center align-items-center`}>
                         <div className={`${styles.grid}`}>
                             <div className={`${styles.grid_1}`}>

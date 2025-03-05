@@ -81,7 +81,7 @@ const Servicos = () => {
     return (
         <>
             <article className={`${styles.mobileVision}`}>
-                <h2>Veja como funciona nossos serviços e como podemos te ajudar !</h2>
+                <h2>Nossos Serviços</h2>
                 <ul className={`${styles.list_servicos}`}>
                     {servicos.map((servico) => (
                         <Link key={servico.id} className={`${styles.list_link}`} to={`/servico/${servico.id}`}>
