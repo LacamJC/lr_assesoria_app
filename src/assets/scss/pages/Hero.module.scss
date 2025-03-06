@@ -28,7 +28,7 @@
         font-size: 5rem;
         font-family: $fonte1;
 
-        animation: show_ease $time_animation ease;
+        // //animation: show_ease $time_//animation ease;
     }
 
     .t_2 {
@@ -54,7 +54,7 @@
         border-radius: 5px;
         @include box-shadow;
 
-        animation: show_ease $time_animation ease;
+        //animation: show_ease $time_//animation ease;d
         &::before {
             content: "Realize seu sonho";
             border-radius: 5px;

@@ -108,7 +108,7 @@
 
 .content {
   padding-top: 75px;
-  margin-bottom: 300px;
+  min-height: 100vh;
   position: relative;
 }
 .content::before {

@@ -131,7 +131,6 @@
 .hero .t_4 {
   font-size: 5rem;
   font-family: "Instrument Serif", cursive;
-  animation: show_ease 0.5s ease;
 }
 .hero .t_2 {
   display: block;
@@ -153,7 +152,6 @@
   position: relative;
   border-radius: 5px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.541);
-  animation: show_ease 0.5s ease;
 }
 .hero .button::before {
   content: "Realize seu sonho";

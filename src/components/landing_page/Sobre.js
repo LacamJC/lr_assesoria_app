@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import Escolha from './Escolha'
 import Contato from "./Contato"
 
+
 const Sobre = () => {
 
     useEffect(()=>{
